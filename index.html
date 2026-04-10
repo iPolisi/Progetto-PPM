@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiegel Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header" class="site-header">
+        
+        <div class="top-bar">
+            <button id="sticky-menu-btn" class="btn-menu sticky-only">☰</button>
+            <div class="logo">DER SPIEGEL</div>
+            <div class="top-actions">
+                <a href="#" class="link-sub">Abonnement</a>
+                <button class="btn-login-white">Anmelden &gt;</button>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <button id="main-menu-btn" class="btn-menu-dark">☰ Menü</button>
+            <nav class="nav-links">
+                <a href="#">Schlagzeilen</a>
+                <a href="#">SPIEGEL+</a>
+                <a href="#">Politik</a>
+                <a href="#">Wirtschaft</a>
+            </nav>
+        </div>
+        
+    </header>
+
+    <div id="menu-overlay" class="overlay"></div>
+
+    <nav id="side-menu" class="side-menu">
+        
+        <div class="side-menu-header">
+            <button class="btn-side-login">Registrati (se vuoi) &gt;</button>
+            <button class="btn-side-sub">Abbonati &gt;</button>
+        </div>
+
+        <div class="side-search">
+            <input type="text" placeholder="spiegel.de durchsuchen...">
+        </div>
+
+        <ul class="side-menu-links">
+            <li><a href="#" class="active">Palle <span>&gt;</span></a></li>
+            <li><a href="#">Culo <span>&gt;</span></a></li>
+            <li><a href="#">Pene <span>&gt;</span></a></li>
+            <li><a href="#">Sesso <span>&gt;</span></a></li>
+            <li><a href="#">SPIEGEL Extra <span>&gt;</span></a></li>
+            <li><a href="#">Prostata <span>&gt;</span></a></li>
+            <li><a href="#">Shop <span>&gt;</span></a></li>
+            <li class="spiegel-plus"><a href="#">SPIEGEL+ <span>&gt;</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="news-container">
+        <article class="hero-article">
+            <img src="https://placehold.co/800x450" alt="Immagine notizia principale">
+            <div class="article-content">
+                <span class="tag">Esclusiva</span>
+                <h2><a href="#">Titolo della notizia principale molto importante che attira l'attenzione</a></h2>
+                <p>ho detto 4</p>
+            </div>
+        </article>
+
+        <article class="side-article">
+            <img src="https://placehold.co/400x250" alt="Immagine secondaria">
+            <div class="article-content">
+                <h3><a href="#">Notizia secondaria ma comunque rilevante</a></h3>
+            </div>
+        </article>
+    </main>
+
+    <section class="category-section">
+        <h2 class="section-title">Politica <span class="arrow">&gt;</span></h2>
+        
+        <div class="grid-3-cols">
+            <article class="small-article">
+                <img src="https://placehold.co/400x250" alt="Notizia politica 1">
+                <div class="article-content">
+                    <span class="tag">Governo</span>
+                    <h3><a href="#">Nuova legge approvata in parlamento dopo un lungo dibattito</a></h3>
+                </div>
+            </article>
+
+            <article class="small-article">
+                <img src="https://placehold.co/400x250" alt="Notizia politica 2">
+                <div class="article-content">
+                    <span class="tag">Elezioni</span>
+                    <h3><a href="#">I sondaggi aggiornati: chi è in testa nelle preferenze?</a></h3>
+                </div>
+            </article>
+
+            <article class="small-article">
+                <img src="https://placehold.co/400x250" alt="Notizia politica 3">
+                <div class="article-content">
+                    <span class="tag">Estero</span>
+                    <h3><a href="#">Incontro bilaterale per discutere i nuovi accordi commerciali</a></h3>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Sezioni</h4>
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">Politica</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Panorama</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servizi</h4>
+                <ul>
+                    <li><a href="#">Abbonamenti</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">App Mobile</a></li>
+                    <li><a href="#">Archivio Storico</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Der Spiegel</h4>
+                <ul>
+                    <li><a href="#">Chi siamo</a></li>
+                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#">Lavora con noi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Seguici</h4>
+                <div class="social-links">
+                    <a href="#" class="social-btn">[ FB ]</a>
+                    <a href="#" class="social-btn">[ X ]</a>
+                    <a href="#" class="social-btn">[ IG ]</a>
+                    <a href="#" class="social-btn">[ IN ]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Der Spiegel Clone. Progetto a scopo educativo.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Termini di Servizio</a>
+                <a href="#">Impostazioni Cookie</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. LOGICA DELLO STICKY HEADER ---
+const headerPrincipale = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        headerPrincipale.classList.add('scrolled');
+    } else {
+        headerPrincipale.classList.remove('scrolled');
+    }
+});
+
+// --- 2. LOGICA DEL MENÙ LATERALE ---
+// Catturiamo i due NUOVI bottoni
+const menuPrincipaleBtn = document.getElementById('main-menu-btn'); // Quello nella barra nera
+const menuStickyBtn = document.getElementById('sticky-menu-btn');   // Quello nella barra rossa
+const sideMenu = document.getElementById('side-menu');
+const overlay = document.getElementById('menu-overlay');
+
+// Funzione universale per aprire/chiudere
+function toggleMenu() {
+    sideMenu.classList.toggle('menu-aperto');
+    overlay.classList.toggle('menu-aperto');
+}
+
+// Colleghiamo la funzione a ENTRAMBI i bottoni e all'overlay scuro
+menuPrincipaleBtn.addEventListener('click', toggleMenu);
+menuStickyBtn.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

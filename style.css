@@ -1,0 +1,452 @@
+/* --- RESET DI BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Lo Spiegel usa font simili per la leggibilità */
+}
+
+/* Colore caratteristico dello Spiegel (circa) */
+:root {
+    --spiegel-red: #E64415; 
+}
+
+/* --- NUOVO HEADER (DOPPIA BARRA) --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Lo tiene sopra a tutto il resto */
+    width: 100%;
+}
+
+/* --- BARRA ROSSA --- */
+.top-bar {
+    background-color: var(--spiegel-red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: padding 0.3s ease; /* Animazione fluida al cambio */
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: serif; /* Il logo Spiegel ha le grazie */
+    transition: font-size 0.3s ease;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.link-sub {
+    color: white;
+    font-size: 14px;
+}
+
+.btn-login-white {
+    background-color: white;
+    color: var(--spiegel-red);
+    border: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Il bottone menu nella barra rossa, nascosto di default */
+.sticky-only {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* --- BARRA NERA --- */
+.nav-bar {
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+    overflow: hidden; /* Fondamentale per farla "collassare" */
+    max-height: 60px; 
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.btn-menu-dark {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #ccc;
+    margin-right: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================================
+   EFFETTO SCROLL (Aggiunto tramite JavaScript)
+   ========================================= */
+
+/* 1. La barra nera collassa e scompare (altezza 0, padding 0) */
+.site-header.scrolled .nav-bar {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* 2. La barra rossa diventa leggermente più sottile */
+.site-header.scrolled .top-bar {
+    padding: 10px 20px;
+}
+
+/* 3. Il logo si rimpicciolisce un po' */
+.site-header.scrolled .logo {
+    font-size: 22px;
+}
+
+/* 4. Compare l'hamburger menù dentro la barra rossa */
+.site-header.scrolled .sticky-only {
+    display: block; 
+}
+
+/* --- BOTTONI E INTERAZIONI (:hover) --- */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    /* INTERAZIONE 1: Il cursore diventa una "manina" quando passi sul bottone */
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    background-color: black;
+    color: white;
+}
+
+/* INTERAZIONE 2: Cambio colore al passaggio del mouse */
+.btn-login:hover {
+    background-color: var(--spiegel-red);
+}
+
+.btn-menu:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- MENÙ A SCOMPARSA --- */
+/* --- OVERLAY SCURO --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Nero al 60% di opacità */
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+/* --- MENU LATERALE --- */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Lo nascondiamo fuori dallo schermo a sinistra */
+    width: 300px;
+    height: 100vh;
+    background-color: #1a1a1a; /* Grigio molto scuro */
+    color: white;
+    z-index: 1000; /* Deve stare sopra l'overlay */
+    overflow-y: auto; /* Permette lo scroll se il menù è molto lungo */
+    transition: transform 0.3s ease; /* L'animazione di entrata/uscita */
+}
+
+/* CLASSI PER ATTIVARE MENU E OVERLAY (tramite JS) */
+.side-menu.menu-aperto {
+    transform: translateX(350px); /* Spinge il menù dentro lo schermo */
+}
+
+.overlay.menu-aperto {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- STILI INTERNI DEL MENU LATERALE --- */
+.side-menu-header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-side-login {
+    background-color: var(--spiegel-red);
+    color: white;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-side-sub {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-search {
+    padding: 0 20px 20px;
+}
+
+.side-search input {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 4px;
+}
+
+.side-menu-links {
+    list-style: none;
+}
+
+.side-menu-links li {
+    border-bottom: 1px solid #333;
+}
+
+.side-menu-links a {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.side-menu-links a:hover {
+    color: var(--spiegel-red);
+    text-decoration: none;
+}
+
+/* Stile per la voce attiva e SPIEGEL+ */
+.side-menu-links a.active {
+    color: var(--spiegel-red);
+}
+
+.spiegel-plus {
+    background-color: var(--spiegel-red);
+}
+
+.spiegel-plus a:hover {
+    color: white; /* Evita che diventi rosso su sfondo rosso */
+    background-color: #c93a10; /* Un rosso più scuro al passaggio */
+}
+
+.menu-nascosto ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* --- LINK E INTERAZIONI --- */
+a {
+    color: black;
+    text-decoration: none; /* Tolgo la sottolineatura di base */
+}
+
+/* INTERAZIONE 3: Effetto sui link delle notizie */
+a:hover {
+    color: var(--spiegel-red);
+    text-decoration: underline; /* Appare la sottolineatura */
+}
+
+/* --- LAYOUT DELLE NOTIZIE (CSS GRID) --- */
+.news-container {
+    display: grid;
+    /* Su schermi grandi, facciamo 3 colonne */
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra il contenitore nella pagina */
+}
+
+.hero-article img, .side-article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tag {
+    color: var(--spiegel-red);
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+h2, h3 { margin-bottom: 10px; }
+
+/* --- RESPONSIVITÀ (MEDIA QUERIES) --- */
+/* Quando lo schermo è più piccolo di 768px (Tablet/Smartphone) */
+@media (max-width: 768px) {
+    .news-container {
+        /* Trasformiamo la griglia in una singola colonna */
+        grid-template-columns: 1fr; 
+    }
+    
+    .menu-nascosto ul {
+        flex-direction: column; /* Il menù si impila in verticale */
+    }
+}
+
+/* --- SEZIONI DI CATEGORIA --- */
+.category-section {
+    max-width: 1200px;
+    margin: 40px auto; /* Centrato con spazio sopra e sotto */
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 20px;
+    border-top: 4px solid black; /* Riga spessa tipica dei giornali */
+    padding-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-title .arrow {
+    color: var(--spiegel-red);
+}
+
+.grid-3-cols {
+    display: grid;
+    /* Crea 3 colonne della stessa larghezza */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.small-article img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #f1f1f1; /* Grigio chiaro per separarlo dai contenuti */
+    padding: 60px 20px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* 4 colonne per i menu del footer */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #333;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--spiegel-red);
+    color: white;
+    text-decoration: none;
+}
+
+/* --- FOOTER INFERIORE --- */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+
+.legal-links a {
+    margin-left: 15px;
+    color: #666;
+}
+
+/* --- AGGIORNAMENTO RESPONSIVITÀ --- */
+/* Questa regola si aggiunge a quella che hai già per i 768px */
+@media (max-width: 768px) {
+    .grid-3-cols {
+        /* Su tablet/smartphone, la griglia a 3 diventa a 1 colonna */
+        grid-template-columns: 1fr; 
+    }
+    
+    .footer-container {
+        /* Su schermi piccoli, il footer passa da 4 a 2 colonne, o 1 colonna */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
