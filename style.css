@@ -1,39 +1,167 @@
-/* --- RESET DI BASE --- */
+/* =========================================
+   1. RESET E VARIABILI GLOBALI
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Lo Spiegel usa font simili per la leggibilità */
+    font-family: Arial, sans-serif; 
 }
 
-/* Colore caratteristico dello Spiegel (circa) */
 :root {
     --spiegel-red: #E64415; 
 }
 
-/* --- NUOVO HEADER (DOPPIA BARRA) --- */
+body {
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--spiegel-red);
+    text-decoration: underline;
+}
+
+/* =========================================
+   1.5 ACCESSIBILITÀ (A11Y)
+   ========================================= */
+/* Bottone invisibile che compare se l'utente naviga con TAB sulla tastiera */
+.skip-link {
+    position: absolute;
+    top: -50px; 
+    left: 0;
+    background: var(--spiegel-red);
+    color: white;
+    padding: 10px 15px;
+    z-index: 9999;
+    font-weight: bold;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Mirino visivo per chi usa solo la tastiera per navigare */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible {
+    outline: 3px solid var(--spiegel-red);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* =========================================
+   2. CLASSI DI UTILITÀ E COMPONENTI
+   ========================================= */
+.spiegel-card {
+    background-color: #2c2c2c;
+    border: 1px solid #333;
+    overflow: hidden; 
+}
+
+.p-15 {
+    padding: 15px; 
+}
+
+.micro-label {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.category-red {
+    display: block;
+    color: var(--spiegel-red);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.plus-icon {
+    background-color: var(--spiegel-red);
+    color: white;
+    padding: 0 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.linea-divisoria {
+    border-top: 2px solid #555; 
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+/* Griglie generiche */
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid-3-cols h3 {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* =========================================
+   3. STRUTTURA E LAYOUT PRINCIPALE
+   ========================================= */
+.page-container {
+    max-width: 1000px; 
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+/* =========================================
+   4. HEADER E BARRA DI NAVIGAZIONE
+   ========================================= */
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 100; /* Lo tiene sopra a tutto il resto */
+    z-index: 100; 
     width: 100%;
 }
 
 /* --- BARRA ROSSA --- */
 .top-bar {
     background-color: var(--spiegel-red);
+    width: 100%;
+}
+
+.top-bar-inner {
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 30px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    transition: padding 0.3s ease; /* Animazione fluida al cambio */
+    justify-content: space-between; 
+    transition: padding 0.3s ease-in-out; 
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
     color: white;
     font-size: 28px;
     font-weight: bold;
-    font-family: serif; /* Il logo Spiegel ha le grazie */
+    font-family: serif; 
     transition: font-size 0.3s ease;
 }
 
@@ -41,6 +169,16 @@
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.sticky-only {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px; 
 }
 
 .link-sub {
@@ -55,27 +193,23 @@
     padding: 8px 15px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Il bottone menu nella barra rossa, nascosto di default */
-.sticky-only {
-    display: none; 
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 15px;
+.btn-login-white:hover {
+    background-color: #f0f0f0;
 }
+
 
 /* --- BARRA NERA --- */
 .nav-bar {
     background-color: #1a1a1a;
     display: flex;
+    justify-content: center; 
     align-items: center;
+    gap: 20px; 
     padding: 10px 20px;
-    gap: 20px;
-    overflow: hidden; /* Fondamentale per farla "collassare" */
+    overflow: hidden; 
     max-height: 60px; 
     transition: max-height 0.3s ease, padding 0.3s ease;
 }
@@ -83,107 +217,102 @@
 .btn-menu-dark {
     background: none;
     border: none;
-    color: white;
+    color: #ccc;
     cursor: pointer;
     font-weight: bold;
+    padding: 15px 20px; 
+    border-right: 1px solid #444; 
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
+/* --- CONTENITORE LINK --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+/* Singoli link */
 .nav-links a {
     color: #ccc;
-    margin-right: 15px;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-right: 20px;
+    border-right: 1px solid #444;
+}
+
+.nav-links a:last-child {
+    border-right: none;
+    padding-right: 0;
 }
 
 .nav-links a:hover {
     color: white;
-    text-decoration: none;
 }
 
-/* =========================================
-   EFFETTO SCROLL (Aggiunto tramite JavaScript)
-   ========================================= */
-
-/* 1. La barra nera collassa e scompare (altezza 0, padding 0) */
+/* Animazione allo scorrimento della pagina */
 .site-header.scrolled .nav-bar {
     max-height: 0;
     padding-top: 0;
     padding-bottom: 0;
 }
 
-/* 2. La barra rossa diventa leggermente più sottile */
 .site-header.scrolled .top-bar {
     padding: 10px 20px;
 }
 
-/* 3. Il logo si rimpicciolisce un po' */
 .site-header.scrolled .logo {
     font-size: 22px;
 }
 
-/* 4. Compare l'hamburger menù dentro la barra rossa */
 .site-header.scrolled .sticky-only {
     display: block; 
 }
 
-/* --- BOTTONI E INTERAZIONI (:hover) --- */
-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: transparent;
-    font-weight: bold;
-    /* INTERAZIONE 1: Il cursore diventa una "manina" quando passi sul bottone */
-    cursor: pointer; 
-    transition: background-color 0.3s ease, color 0.3s ease;
+.site-header.scrolled .top-actions{
+    display: none;
 }
 
-.btn-login {
-    background-color: black;
-    color: white;
+.site-header.scrolled .top-bar-inner{
+    padding: 10px 20px;
 }
 
-/* INTERAZIONE 2: Cambio colore al passaggio del mouse */
-.btn-login:hover {
-    background-color: var(--spiegel-red);
-}
-
-.btn-menu:hover {
-    background-color: #f0f0f0;
-}
-
-/* --- MENÙ A SCOMPARSA --- */
-/* --- OVERLAY SCURO --- */
+/* =========================================
+   5. MENU LATERALE A SCOMPARSA (OVERLAY)
+   ========================================= */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6); /* Nero al 60% di opacità */
+    background-color: rgba(0, 0, 0, 0.6); 
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;
 }
 
-/* --- MENU LATERALE --- */
 .side-menu {
     position: fixed;
     top: 0;
-    left: -350px; /* Lo nascondiamo fuori dallo schermo a sinistra */
+    left: -350px; 
     width: 300px;
     height: 100vh;
-    background-color: #1a1a1a; /* Grigio molto scuro */
+    background-color: #1a1a1a; 
     color: white;
-    z-index: 1000; /* Deve stare sopra l'overlay */
-    overflow-y: auto; /* Permette lo scroll se il menù è molto lungo */
-    transition: transform 0.3s ease; /* L'animazione di entrata/uscita */
+    z-index: 1000; 
+    overflow-y: auto; 
+    transition: transform 0.3s ease; 
 }
 
-/* CLASSI PER ATTIVARE MENU E OVERLAY (tramite JS) */
 .side-menu.menu-aperto {
-    transform: translateX(350px); /* Spinge il menù dentro lo schermo */
+    transform: translateX(350px); 
 }
 
 .overlay.menu-aperto {
@@ -191,7 +320,6 @@ button {
     visibility: visible;
 }
 
-/* --- STILI INTERNI DEL MENU LATERALE --- */
 .side-menu-header {
     padding: 20px;
     display: flex;
@@ -199,23 +327,26 @@ button {
     gap: 10px;
 }
 
-.btn-side-login {
-    background-color: var(--spiegel-red);
-    color: white;
+.btn-side-login, .btn-side-sub {
+    padding: 10px 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
     width: 100%;
     text-align: left;
     display: flex;
     justify-content: space-between;
 }
 
+.btn-side-login {
+    background-color: var(--spiegel-red);
+    color: white;
+}
+
 .btn-side-sub {
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
 }
 
 .side-search {
@@ -246,15 +377,10 @@ button {
     color: white;
     font-size: 16px;
     font-weight: bold;
-}
-
-.side-menu-links a:hover {
-    color: var(--spiegel-red);
     text-decoration: none;
 }
 
-/* Stile per la voce attiva e SPIEGEL+ */
-.side-menu-links a.active {
+.side-menu-links a:hover, .side-menu-links a.active {
     color: var(--spiegel-red);
 }
 
@@ -263,190 +389,488 @@ button {
 }
 
 .spiegel-plus a:hover {
-    color: white; /* Evita che diventi rosso su sfondo rosso */
-    background-color: #c93a10; /* Un rosso più scuro al passaggio */
+    color: white; 
+    background-color: #c93a10; 
 }
 
-.menu-nascosto ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+/* =========================================
+   6. ARTICOLI E NOTIZIE
+   ========================================= */
+/* Barra Notizie Testuali in Alto */
+.top-headlines {
+    background-color: #1a1a1a; 
+    border-top: 1px solid #333; 
 }
 
-/* --- LINK E INTERAZIONI --- */
-a {
-    color: black;
-    text-decoration: none; /* Tolgo la sottolineatura di base */
-}
-
-/* INTERAZIONE 3: Effetto sui link delle notizie */
-a:hover {
-    color: var(--spiegel-red);
-    text-decoration: underline; /* Appare la sottolineatura */
-}
-
-/* --- LAYOUT DELLE NOTIZIE (CSS GRID) --- */
-.news-container {
+.headlines-container {
+    max-width: 1000px; 
+    margin: 0 auto; 
     display: grid;
-    /* Su schermi grandi, facciamo 3 colonne */
-    grid-template-columns: 2fr 1fr; 
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto; /* Centra il contenitore nella pagina */
-}
-
-.hero-article img, .side-article img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.tag {
-    color: var(--spiegel-red);
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-h2, h3 { margin-bottom: 10px; }
-
-/* --- RESPONSIVITÀ (MEDIA QUERIES) --- */
-/* Quando lo schermo è più piccolo di 768px (Tablet/Smartphone) */
-@media (max-width: 768px) {
-    .news-container {
-        /* Trasformiamo la griglia in una singola colonna */
-        grid-template-columns: 1fr; 
-    }
-    
-    .menu-nascosto ul {
-        flex-direction: column; /* Il menù si impila in verticale */
-    }
-}
-
-/* --- SEZIONI DI CATEGORIA --- */
-.category-section {
-    max-width: 1200px;
-    margin: 40px auto; /* Centrato con spazio sopra e sotto */
-    padding: 0 20px;
-}
-
-.section-title {
-    font-size: 20px;
-    border-top: 4px solid black; /* Riga spessa tipica dei giornali */
-    padding-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.section-title .arrow {
-    color: var(--spiegel-red);
-}
-
-.grid-3-cols {
-    display: grid;
-    /* Crea 3 colonne della stessa larghezza */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
 }
 
-.small-article img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.headline-item {
+    padding: 15px 20px;
+    border-right: 1px solid #333; 
 }
 
-/* --- FOOTER --- */
-.site-footer {
-    background-color: #f1f1f1; /* Grigio chiaro per separarlo dai contenuti */
-    padding: 60px 20px 20px;
-    margin-top: 60px;
-    border-top: 1px solid #ddd;
+.headline-item:last-child {
+    border-right: none;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    /* 4 colonne per i menu del footer */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 40px;
-    margin-bottom: 40px;
+.headline-item h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 
-.footer-col h4 {
-    margin-bottom: 15px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 10px;
-}
-
-.footer-col a {
-    color: #333;
-    font-size: 14px;
-}
-
-.social-links {
-    display: flex;
-    gap: 10px;
-}
-
-.social-btn {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: #ddd;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.social-btn:hover {
-    background-color: var(--spiegel-red);
-    color: white;
+.headline-item a {
+    color: white; 
+    font-weight: normal; 
     text-decoration: none;
 }
 
-/* --- FOOTER INFERIORE --- */
-.footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
+.headline-item a:hover {
+    color: var(--spiegel-red); 
+}
+
+.headline-item .time {
+    color: #aaa; 
+    font-size: 12px;
+}
+
+/* Notizia Principale (Hero) */
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 20px;
+}
+
+.hero-text {
+    padding: 25px;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Notizia Secondaria (Orizzontale) */
+.secondary-split {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr; 
+    gap: 20px;
+}
+
+.secondary-text {
+    padding: 20px 25px;
+}
+
+.secondary-text h2 {
+    font-size: 24px; 
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.secondary-text p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.secondary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   7. SEZIONI SPECIALI (Widget e Classifiche)
+   ========================================= */
+/* Classifica Laterale (se riutilizzata) */
+.sidebar {
+    position: sticky; 
+    top: 100px; 
+    height: fit-content;
+}
+
+.trending-widget {
+    padding: 20px;
+}
+
+.widget-title {
+    font-size: 18px;
+    color: white;
+    border-bottom: 2px solid var(--spiegel-red); 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Classifica Orizzontale (Meistgelesen) */
+.horizontal-ranked-section {
+    padding: 25px 30px;
+}
+
+.section-title-red {
+    color: var(--spiegel-red);
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.ranked-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ranked-item {
+    display: flex; 
+    gap: 15px;
+    padding-right: 20px;
+    border-right: 1px solid #444; 
+}
+
+.ranked-item:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.rank-number {
+    font-size: 32px;
+    color: #ccc; 
+    font-weight: normal;
+    font-family: serif; 
+    line-height: 1;
+}
+
+.ranked-text h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.4;
+}
+
+.ranked-text a {
+    color: white;
+}
+
+.ranked-text a:hover {
+    color: var(--spiegel-red);
+}
+
+/* =========================================
+   8. CAROSELLI (Shop e Riviste)
+   ========================================= */
+.carousel-wrapper {
+    position: relative; 
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 15px; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 35%; 
+    transform: translateY(-50%);
+    background-color: #111; 
+    color: white;
+    border: 1px solid #555;
+    border-radius: 50%; 
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--spiegel-red);
+    border-color: var(--spiegel-red);
+}
+
+.prev-btn { left: -15px; } 
+.next-btn { right: -15px; }
+
+/* Carosello: Shop */
+.shop-carousel-section {
+    padding: 25px 30px;
+}
+
+.shop-header {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    color: #666;
+    align-items: baseline; 
+    margin-bottom: 20px;
 }
 
-.legal-links a {
-    margin-left: 15px;
-    color: #666;
+.shop-header .section-title-red {
+    margin-bottom: 0; 
 }
 
-/* --- AGGIORNAMENTO RESPONSIVITÀ --- */
-/* Questa regola si aggiunge a quella che hai già per i 768px */
-@media (max-width: 768px) {
-    .grid-3-cols {
-        /* Su tablet/smartphone, la griglia a 3 diventa a 1 colonna */
+.shop-link {
+    font-size: 13px;
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.shop-card {
+    flex: 0 0 calc(33.333% - 14px); 
+    scroll-snap-align: start; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shop-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+}
+
+.shop-card h4 {
+    font-size: 15px;
+    color: white;
+}
+
+.shop-card p {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+/* Carosello: Magazine (Pre-Footer) */
+.magazine-section {
+    max-width: 1000px;
+    margin: 60px auto 40px auto;
+    text-align: center;
+}
+
+.magazine-title {
+    color: white;
+    font-size: 18px;
+    font-family: serif;
+    margin-bottom: 30px;
+}
+
+.magazine-track {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto; 
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.magazine-track::-webkit-scrollbar {
+    display: none;
+}
+
+.magazine-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 140px; 
+}
+
+.magazine-item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
+    transition: transform 0.3s ease;
+}
+
+.magazine-item img:hover {
+    transform: scale(1.05); 
+}
+
+.magazine-item span {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.magazine-prev-btn, .magazine-next-btn {
+    top: 40%; 
+}
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+.site-footer-new {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    background-color: #2c2c2c; 
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.footer-title {
+    color: white;
+    font-size: 18px;
+    font-family: serif;
+    margin-bottom: 25px;
+}
+
+.footer-links-main,
+.footer-links-secondary {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px 25px; 
+}
+
+.footer-links-main a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links-secondary a {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.footer-links-main a:hover,
+.footer-links-secondary a:hover {
+    color: var(--spiegel-red);
+}
+
+.mt-10 {
+    margin-top: 10px; 
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #444; 
+    margin: 30px auto;
+    width: 90%; 
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.footer-socials a {
+    color: #ccc;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.footer-socials a:hover {
+    color: white;
+}
+
+.social-icon {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   10. RESPONSIVITÀ (MEDIA QUERIES)
+   ========================================= */
+
+/* Tablet e schermi medi */
+@media (max-width: 1024px) {
+    .page-container {
         grid-template-columns: 1fr; 
     }
     
-    .footer-container {
-        /* Su schermi piccoli, il footer passa da 4 a 2 colonne, o 1 colonna */
-        grid-template-columns: repeat(2, 1fr); 
+    .sidebar {
+        display: none; 
+    }
+    
+    .hero-split, 
+    .secondary-split {
+        grid-template-columns: 1fr; 
+    }
+    
+    .hero-image img, 
+    .secondary-image img {
+        height: 300px;
+    }
+}
+
+/* Smartphone e schermi piccoli */
+@media (max-width: 768px) {
+    /* Griglie a colonna singola */
+    .headlines-container,
+    .grid-3-cols,
+    .ranked-grid-3 {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Articoli e classifiche incolonnate */
+    .headline-item,
+    .ranked-item {
+        border-right: none;
+        border-bottom: 1px solid #444; 
+    }
+    
+    .headline-item:last-child {
+        border-bottom: none;
     }
 
-    .footer-bottom {
+    .ranked-item {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    
+    .ranked-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    /* Adattamenti per Caroselli e Footer */
+    .magazine-track {
+        justify-content: flex-start; 
+        padding: 0 20px 20px;
+    }
+    
+    .footer-socials {
         flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        gap: 15px;
     }
 }

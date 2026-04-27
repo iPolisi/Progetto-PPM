@@ -8,19 +8,27 @@
 </head>
 <body>
 
+    <a href="#contenuto-principale" class="skip-link">Salta al contenuto principale</a>
+
     <header id="main-header" class="site-header">
-        
         <div class="top-bar">
-            <button id="sticky-menu-btn" class="btn-menu sticky-only">☰</button>
-            <div class="logo">DER SPIEGEL</div>
-            <div class="top-actions">
-                <a href="#" class="link-sub">Abonnement</a>
-                <button class="btn-login-white">Anmelden &gt;</button>
+            <div class="top-bar-inner">
+                
+                <div class="logo-wrapper">
+                    <button id="sticky-menu-btn" class="btn-menu sticky-only" aria-label="Apri il menù principale">☰</button>
+                    <div class="logo">DER SPIEGEL</div>
+                </div>
+
+                <div class="top-actions">
+                    <a href="#" class="link-sub">Abonnement</a>
+                    <button class="btn-login-white">Anmelden &gt;</button>
+                </div>
+                
             </div>
         </div>
 
         <div class="nav-bar">
-            <button id="main-menu-btn" class="btn-menu-dark">☰ Menü</button>
+            <button id="main-menu-btn" class="btn-menu-dark" aria-label="Apri il menù principale">☰ Menü</button>
             <nav class="nav-links">
                 <a href="#">Schlagzeilen</a>
                 <a href="#">SPIEGEL+</a>
@@ -28,22 +36,37 @@
                 <a href="#">Wirtschaft</a>
             </nav>
         </div>
-        
     </header>
+
+    <section class="top-headlines">
+        <div class="headlines-container">
+            <article class="headline-item">
+                <h4><a href="#">Ungarn nach Orbán: Wahlsieger Magyar will System der Gewaltenteilung wiederherstellen</a></h4>
+                <span class="time">Vor 10 Min</span>
+            </article>
+
+            <article class="headline-item">
+                <h4><a href="#">Prozess in Berlin: Zweieinhalb Jahre Haft nach Attacke auf jüdischen Studenten</a></h4>
+                <span class="time">Vor 21 Min</span>
+            </article>
+
+            <article class="headline-item">
+                <h4><a href="#">»Kill Bill« als ein laaaanger Film: 275 Minuten Rache</a></h4>
+                <span class="time">Vor 26 Min</span>
+            </article>
+        </div>
+    </section>
 
     <div id="menu-overlay" class="overlay"></div>
 
     <nav id="side-menu" class="side-menu">
-        
         <div class="side-menu-header">
             <button class="btn-side-login">Registrati (se vuoi) &gt;</button>
             <button class="btn-side-sub">Abbonati &gt;</button>
         </div>
-
         <div class="side-search">
-            <input type="text" placeholder="spiegel.de durchsuchen...">
+            <input type="text" placeholder="spiegel.de durchsuchen..." aria-label="Cerca nel sito">
         </div>
-
         <ul class="side-menu-links">
             <li><a href="#" class="active">Palle <span>&gt;</span></a></li>
             <li><a href="#">Culo <span>&gt;</span></a></li>
@@ -56,135 +79,349 @@
         </ul>
     </nav>
 
-    <main class="news-container">
-        <article class="hero-article">
-            <img src="https://placehold.co/800x450" alt="Immagine notizia principale">
-            <div class="article-content">
-                <span class="tag">Esclusiva</span>
-                <h2><a href="#">Titolo della notizia principale molto importante che attira l'attenzione</a></h2>
-                <p>ho detto 4</p>
-            </div>
-        </article>
+    <div class="page-container">
 
-        <article class="side-article">
-            <img src="https://placehold.co/400x250" alt="Immagine secondaria">
-            <div class="article-content">
-                <h3><a href="#">Notizia secondaria ma comunque rilevante</a></h3>
-            </div>
-        </article>
-    </main>
+        <main id="contenuto-principale" class="main-content">
+            
+            <section class="hero-complex">
+                <span class="category-red">Russlands Krieg in der Ukraine</span>
+                
+                <div class="spiegel-card contenitore-cluster">
+                    
+                    <article class="hero-split">
+                        <div class="hero-text">
+                            <h2><span class="plus-icon">+</span> Ukraine will feindliche Stellung erstmals nur mit Robotern und Drohnen eingenommen haben</h2>
+                            <p>Die Sensation kam in Minute vier: Mit einer bemerkenswerten Präsentation hat der ukrainische Präsident eine militärische Premiere verkündet. Russische Blogger reagieren bereits nervös.</p>
+                        </div>
+                        <div class="hero-image">
+                            <img src="png/600x400.png" alt="Il presidente ucraino Zelensky in un ambiente buio circondato da mezzi militari">
+                        </div>
+                    </article>
 
-    <section class="category-section">
-        <h2 class="section-title">Politica <span class="arrow">&gt;</span></h2>
-        
-        <div class="grid-3-cols">
-            <article class="small-article">
-                <img src="https://placehold.co/400x250" alt="Notizia politica 1">
-                <div class="article-content">
-                    <span class="tag">Governo</span>
-                    <h3><a href="#">Nuova legge approvata in parlamento dopo un lungo dibattito</a></h3>
+                    <article class="secondary-split linea-divisoria">
+                        <div class="secondary-text">
+                            <h2><span class="plus-icon">+</span> Für vier Millionen Rubel an die Front, plus Reisekosten</h2>
+                            <p>Russlands Behörden locken mit immer höheren Prämien, um Männer für den Krieg gegen die Ukraine zu verpflichten. Nicht nur die Soldaten bekommen Geld, auch ihre Anwerber.</p>
+                        </div>
+                        <div class="secondary-image">
+                            <img src="png/500x350.png" alt="Soldati in tenuta da combattimento">
+                        </div>
+                    </article>
+
                 </div>
+            </section>
+
+            <section class="sub-hero">
+                <div class="grid-3-cols">
+                    <article class="spiegel-card p-15">
+                        <span class="micro-label">MEINUNG</span>
+                        <h3><span class="plus-icon">+</span> Deutschland braucht diesen Agenda-Moment</h3>
+                    </article>
+                    <article class="spiegel-card p-15">
+                        <h3>»Volle Unterstützung« – Merz stellt sich hinter Wirtschaftsministerin</h3>
+                    </article>
+                    <article class="spiegel-card p-15">
+                        <h3>Mittagsaufschlag an den Tankstellen mit neuem Rekord</h3>
+                    </article>
+                </div>
+            </section>
+
+            <section class="hero-complex">
+                <span class="category-red">Panorama</span>
+                
+                <div class="spiegel-card contenitore-cluster">
+                    
+                    <article class="hero-split">
+                        <div class="hero-text">
+                            <h2><span class="plus-icon">+</span> KI-Revolution im Alltag: Was sich jetzt für alle ändert</h2>
+                            <p>Von autonomen Autos bis hin zu smarten Haushaltsgeräten – die neue Technologie-Welle erreicht die Verbraucher. Ein Überblick über die wichtigsten Neuerungen, die uns in diesem Jahr erwarten.</p>
+                        </div>
+                        <div class="hero-image">
+                            <img src="png/600x400.png" alt="Rappresentazione grafica di intelligenza artificiale e reti neurali">
+                        </div>
+                    </article>
+
+                    <article class="secondary-split linea-divisoria">
+                        <div class="secondary-text">
+                            <h2><span class="plus-icon">+</span> Mars-Mission erfolgreich gestartet: Der lange Weg zum Roten Planeten</h2>
+                            <p>Nach jahrelanger Vorbereitung ist die neue Rakete auf dem Weg. Forscher erhoffen sich bahnbrechende Erkenntnisse über die Entstehung unseres Sonnensystems und mögliches Leben.</p>
+                        </div>
+                        <div class="secondary-image">
+                            <img src="png/500x350.png" alt="Lancio di un razzo spaziale verso il cielo">
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="hero-complex">
+                <span class="category-red">Wirtschaft</span>
+                
+                <div class="spiegel-card contenitore-cluster">
+                    
+                    <article class="hero-split">
+                        <div class="hero-text">
+                            <h2><span class="plus-icon">+</span> Inflation sinkt weiter: Was das für Sparer bedeutet</h2>
+                            <p>Die Teuerungsrate in Deutschland geht spürbar zurück. Experten erklären, warum die Preise im Supermarkt trotzdem hoch bleiben und wie Anleger jetzt reagieren sollten, um ihr Geld zu schützen.</p>
+                        </div>
+                        <div class="hero-image">
+                            <img src="png/600x400.png" alt="Grafico economico in rialzo verde">
+                        </div>
+                    </article>
+
+                    <article class="secondary-split linea-divisoria">
+                        <div class="secondary-text">
+                            <h2><span class="plus-icon">+</span> Neue EU-Regeln für Tech-Giganten treten in Kraft</h2>
+                            <p>Apple, Google und Meta müssen ihre Plattformen öffnen. Für Verbraucher bringt das neue Freiheiten bei der App-Wahl, für die Konzerne bedeutet es Milliarden-Umbauten.</p>
+                        </div>
+                        <div class="secondary-image">
+                            <img src="png/500x350.png" alt="Loghi stilizzati delle principali aziende tecnologiche">
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="hero-complex">
+                <span class="category-red">Sport</span>
+                
+                <div class="spiegel-card contenitore-cluster">
+                    
+                    <article class="hero-split">
+                        <div class="hero-text">
+                            <h2><span class="plus-icon">+</span> Überraschung im Finale: Der Außenseiter holt den Pokal</h2>
+                            <p>Ein historischer Abend in der ausverkauften Arena: Nach einem dramatischen Elfmeterschießen feiert der Underdog den größten Erfolg der Vereinsgeschichte und lässt den Favoriten fassungslos zurück.</p>
+                        </div>
+                        <div class="hero-image">
+                            <img src="png/600x400.png" alt="Trofeo sportivo dorato alzato in aria">
+                        </div>
+                    </article>
+
+                    <article class="secondary-split linea-divisoria">
+                        <div class="secondary-text">
+                            <h2><span class="plus-icon">+</span> Die Zukunft der Formel 1: Mehr Rennen, neue Motoren</h2>
+                            <p>Die Motorsport-Königsklasse stellt sich neu auf. Ab 2026 gelten völlig neue Regeln, die den Sport nachhaltiger, lauter und vor allem wieder spannender machen sollen.</p>
+                        </div>
+                        <div class="secondary-image">
+                            <img src="png/500x350.png" alt="Automobile di Formula 1 rossa in pista">
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="horizontal-ranked-section spiegel-card">
+                <h3 class="section-title-red">Top bei SPIEGEL+</h3>
+                <div class="ranked-grid-3">
+                    <article class="ranked-item">
+                        <span class="rank-number">1</span>
+                        <div class="ranked-text">
+                            <h4><a href="#"><span class="plus-icon">+</span> Machtwechsel in Ungarn: Die drei Erkenntnisse aus Viktor Orbáns Wahlniederlage</a></h4>
+                        </div>
+                    </article>
+                    <article class="ranked-item">
+                        <span class="rank-number">2</span>
+                        <div class="ranked-text">
+                            <h4><a href="#"><span class="plus-icon">+</span> Gedenken in Buchenwald: Die unverzichtbaren Worte des Hape Kerkeling</a></h4>
+                        </div>
+                    </article>
+                    <article class="ranked-item">
+                        <span class="rank-number">3</span>
+                        <div class="ranked-text">
+                            <h4><a href="#"><span class="plus-icon">+</span> Reaktionen zur Ungarn-Wahl: Europa atmet auf, und die Rechte redet sich Orbáns Niederlage schön</a></h4>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="horizontal-ranked-section spiegel-card">
+                <h3 class="section-title-red">Meistgelesene Artikel</h3>
+                <div class="ranked-grid-3">
+                    <article class="ranked-item">
+                        <span class="rank-number">1</span>
+                        <div class="ranked-text">
+                            <h4><a href="#">Gescheiterte Friedensverhandlungen: US-Präsident Trump kündigt Blockade der Straße von Hormus an</a></h4>
+                        </div>
+                    </article>
+                    <article class="ranked-item">
+                        <span class="rank-number">2</span>
+                        <div class="ranked-text">
+                            <h4><a href="#">Krisen-PK der Bundesregierung: Koalition beschließt Entlastung wegen hoher Spritpreise</a></h4>
+                        </div>
+                    </article>
+                    <article class="ranked-item">
+                        <span class="rank-number">3</span>
+                        <div class="ranked-text">
+                            <h4><a href="#">Glückloser US-Vizepräsident: JD Vance wollte Orbán helfen – nun wird er im Netz verspottet</a></h4>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="shop-carousel-section spiegel-card">
+                
+                <div class="shop-header">
+                    <h3 class="section-title-red">SPIEGEL Shop <span class="arrow">&gt;</span></h3>
+                    <a href="#" class="shop-link">Jetzt entdecken</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev-btn" aria-label="Scorri indietro">&lt;</button>
+                    <button class="carousel-btn next-btn" aria-label="Scorri avanti">&gt;</button>
+
+                    <div class="carousel-track" id="shop-track">
+                        
+                        <article class="shop-card">
+                            <img src="png/400x400.png" alt="Copertina del libro Smarter Leben">
+                            <h4>Die »Smarter leben«-Buchliste <span class="arrow">&gt;</span></h4>
+                            <p>Bücher, die Leben und Alltag einfacher machen. Eine Auswahl aus dem Podcast.</p>
+                        </article>
+
+                        <article class="shop-card">
+                            <img src="png/400x400.png" alt="Vari quaderni e penne colorate">
+                            <h4>Notizbücher, Stifte und mehr <span class="arrow">&gt;</span></h4>
+                            <p>Schön schreiben, klug planen: Notizbücher, Stifte und mehr für Gedanken und Ideen.</p>
+                        </article>
+
+                        <article class="shop-card">
+                            <img src="png/400x400.png" alt="Persone che giocano a un gioco da tavolo">
+                            <h4>Gesellschaftsspiele für Sie <span class="arrow">&gt;</span></h4>
+                            <p>Neuheiten, Klassiker und Empfehlungen, die für Gesprächsstoff sorgen.</p>
+                        </article>
+
+                        <article class="shop-card">
+                            <img src="png/400x400.png" alt="Copertina generica Spiegel Bestseller">
+                            <h4>Spiegel Bestseller <span class="arrow">&gt;</span></h4>
+                            <p>Scopri i libri più venduti di questa settimana selezionati dalla nostra redazione.</p>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+    <section class="magazine-section">
+        <h3 class="magazine-title">Alle Magazine des SPIEGEL</h3>
+        <div class="magazine-track">
+            <article class="magazine-item">
+                <img src="png/180x240.png" alt="">
+                <span>DER SPIEGEL</span>
             </article>
-
-            <article class="small-article">
-                <img src="https://placehold.co/400x250" alt="Notizia politica 2">
-                <div class="article-content">
-                    <span class="tag">Elezioni</span>
-                    <h3><a href="#">I sondaggi aggiornati: chi è in testa nelle preferenze?</a></h3>
-                </div>
+            <article class="magazine-item">
+                <img src="png/180x240.png" alt="">
+                <span>DEIN SPIEGEL</span>
             </article>
-
-            <article class="small-article">
-                <img src="https://placehold.co/400x250" alt="Notizia politica 3">
-                <div class="article-content">
-                    <span class="tag">Estero</span>
-                    <h3><a href="#">Incontro bilaterale per discutere i nuovi accordi commerciali</a></h3>
-                </div>
+            <article class="magazine-item">
+                <img src="png/180x240.png" alt="">
+                <span>SPIEGEL WISSEN</span>
+            </article>
+            <article class="magazine-item">
+                <img src="png/180x240.png" alt="">
+                <span>S-Magazin</span>
+            </article>
+            <article class="magazine-item">
+                <img src="png/180x240.png" alt="">
+                <span>SPIEGEL GESCHICHTE</span>
+            </article>
+            <article class="magazine-item">
+                <img src="png/180x240.png" alt="">
+                <span>SPIEGEL BESTSELLER</span>
             </article>
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Sezioni</h4>
-                <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">Politica</a></li>
-                    <li><a href="#">Economia</a></li>
-                    <li><a href="#">Panorama</a></li>
-                </ul>
-            </div>
+    <footer class="site-footer-new">
+        <h3 class="footer-title">SPIEGEL Gruppe</h3>
+        
+        <ul class="footer-links-main">
+            <li><a href="#">Abo</a></li>
+            <li><a href="#">Abo kündigen</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">manager magazin</a></li>
+            <li><a href="#">Harvard Business manager</a></li>
+            <li><a href="#">SPIEGEL Ed</a></li>
+            <li><a href="#">11FREUNDE</a></li>
+            <li><a href="#">Werbung</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Branded Partnerships</a></li>
+        </ul>
 
-            <div class="footer-col">
-                <h4>Servizi</h4>
-                <ul>
-                    <li><a href="#">Abbonamenti</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">App Mobile</a></li>
-                    <li><a href="#">Archivio Storico</a></li>
-                </ul>
-            </div>
+        <hr class="footer-divider">
 
-            <div class="footer-col">
-                <h4>Der Spiegel</h4>
-                <ul>
-                    <li><a href="#">Chi siamo</a></li>
-                    <li><a href="#">Contatti</a></li>
-                    <li><a href="#">Lavora con noi</a></li>
-                </ul>
-            </div>
+        <ul class="footer-links-secondary">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Barrierefreiheit</a></li>
+            <li><a href="#">Nutzungsbedingungen</a></li>
+            <li><a href="#">Teilnahmebedingungen</a></li>
+            <li><a href="#">Cookies & Tracking</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
 
-            <div class="footer-col social-col">
-                <h4>Seguici</h4>
-                <div class="social-links">
-                    <a href="#" class="social-btn">[ FB ]</a>
-                    <a href="#" class="social-btn">[ X ]</a>
-                    <a href="#" class="social-btn">[ IG ]</a>
-                    <a href="#" class="social-btn">[ IN ]</a>
-                </div>
-            </div>
-        </div>
+        <ul class="footer-links-secondary mt-10">
+            <li><a href="#">Hilfe & Service</a></li>
+            <li><a href="#">Text- & Nutzungsrechte</a></li>
+        </ul>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 Der Spiegel Clone. Progetto a scopo educativo.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Termini di Servizio</a>
-                <a href="#">Impostazioni Cookie</a>
-            </div>
+        <div class="footer-socials">
+            <a href="#"><span class="social-icon" aria-hidden="true">f</span> Facebook</a>
+            <a href="#"><span class="social-icon" aria-hidden="true">📷</span> Instagram</a>
+            <a href="#"><span class="social-icon" aria-hidden="true">🌐</span> Wo Sie uns noch folgen können</a>
         </div>
     </footer>
 
     <script>
         // --- 1. LOGICA DELLO STICKY HEADER ---
-const headerPrincipale = document.getElementById('main-header');
+        const headerPrincipale = document.getElementById('main-header');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        headerPrincipale.classList.add('scrolled');
-    } else {
-        headerPrincipale.classList.remove('scrolled');
-    }
-});
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                headerPrincipale.classList.add('scrolled');
+            } else {
+                headerPrincipale.classList.remove('scrolled');
+            }
+        });
 
-// --- 2. LOGICA DEL MENÙ LATERALE ---
-// Catturiamo i due NUOVI bottoni
-const menuPrincipaleBtn = document.getElementById('main-menu-btn'); // Quello nella barra nera
-const menuStickyBtn = document.getElementById('sticky-menu-btn');   // Quello nella barra rossa
-const sideMenu = document.getElementById('side-menu');
-const overlay = document.getElementById('menu-overlay');
+        // --- 2. LOGICA DEL MENÙ LATERALE ---
+        const menuPrincipaleBtn = document.getElementById('main-menu-btn'); 
+        const menuStickyBtn = document.getElementById('sticky-menu-btn');   
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('menu-overlay');
 
-// Funzione universale per aprire/chiudere
-function toggleMenu() {
-    sideMenu.classList.toggle('menu-aperto');
-    overlay.classList.toggle('menu-aperto');
-}
+        function toggleMenu() {
+            sideMenu.classList.toggle('menu-aperto');
+            overlay.classList.toggle('menu-aperto');
+            
+            // Accessibilità aggiuntiva (opzionale ma consigliata):
+            // Quando si apre il menù, sposta il focus all'interno di esso
+            if (sideMenu.classList.contains('menu-aperto')) {
+                setTimeout(() => {
+                    document.querySelector('.side-search input').focus();
+                }, 300);
+            }
+        }
 
-// Colleghiamo la funzione a ENTRAMBI i bottoni e all'overlay scuro
-menuPrincipaleBtn.addEventListener('click', toggleMenu);
-menuStickyBtn.addEventListener('click', toggleMenu);
-overlay.addEventListener('click', toggleMenu);
+        menuPrincipaleBtn.addEventListener('click', toggleMenu);
+        menuStickyBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // --- 3. LOGICA DEL CAROSELLO SHOP ---
+        const track = document.getElementById('shop-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        // Quando clicchi a destra, scorre di 300 pixel
+        nextBtn.addEventListener('click', () => {
+            track.scrollBy({ left: 350, behavior: 'smooth' });
+        });
+
+        // Quando clicchi a sinistra, torna indietro di 300 pixel
+        prevBtn.addEventListener('click', () => {
+            track.scrollBy({ left: -350, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
