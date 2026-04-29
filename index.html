@@ -3,107 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiegel Clone</title>
+    <title>Sito News Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#contenuto-principale" class="skip-link">Salta al contenuto principale</a>
+    <a href="#contenuto-principale" class="salta-al-contenuto">Salta al contenuto principale</a>
 
-    <header id="main-header" class="site-header">
-        <div class="top-bar">
-            <div class="top-bar-inner">
+    <header id="header-principale" class="header-sito">
+        
+        <div class="barra-rossa">
+            <div class="barra-rossa-interna">
                 
-                <div class="logo-wrapper">
-                    <button id="sticky-menu-btn" class="btn-menu sticky-only" aria-label="Apri il menù principale">☰</button>
-                    <div class="logo">DER SPIEGEL</div>
+                <div class="contenitore-logo">
+                    <button id="btn-menu-fisso" class="btn-menu solo-menu-fisso" aria-label="Apri il menù principale">☰</button>
+                    <div class="logo">IL GIORNALE</div>
                 </div>
 
-                <div class="top-actions">
-                    <a href="#" class="link-sub">Abonnement</a>
-                    <button class="btn-login-white">Anmelden &gt;</button>
+                <div class="azioni-superiori">
+                    <a href="#" class="link-abbonamento">Abbonati</a>
+                    <button class="btn-accedi-bianco">Accedi &gt;</button>
                 </div>
                 
             </div>
         </div>
 
-        <div class="nav-bar">
-            <button id="main-menu-btn" class="btn-menu-dark" aria-label="Apri il menù principale">☰ Menü</button>
-            <nav class="nav-links">
-                <a href="#">Schlagzeilen</a>
-                <a href="#">SPIEGEL+</a>
-                <a href="#">Politik</a>
-                <a href="#">Wirtschaft</a>
-            </nav>
+        <div class="barra-nera">
+            <div class="barra-nera-interna">
+                
+                <button id="btn-menu-principale" class="btn-menu-scuro" aria-label="Apri il menù principale">
+                    ☰ Menu
+                </button>
+                
+                <nav class="link-navigazione">
+                    <a href="#">Ultime Notizie</a>
+                    <a href="#">ESCLUSIVA+</a>
+                    <a href="#">Dati Sportivi</a>
+                    <a href="#">Giochi e Quiz</a>
+                    <a href="#">Dibattiti</a>
+                    <a href="#">Politica</a>
+                    <a href="#">Estero</a>
+                    <a href="#">Panorama</a>
+                    <a href="#">Sport</a>
+                    <a href="#">Economia</a>
+                </nav>
+
+                <button class="btn-ricerca" aria-label="Cerca nel sito">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+            </div>
         </div>
     </header>
 
-    <section class="top-headlines">
-        <div class="headlines-container">
-            <article class="headline-item">
-                <h4><a href="#">Ungarn nach Orbán: Wahlsieger Magyar will System der Gewaltenteilung wiederherstellen</a></h4>
-                <span class="time">Vor 10 Min</span>
+    <section class="notizie-testuali-superiori">
+        <div class="contenitore-notizie-testuali">
+            <article class="notizia-testuale">
+                <h4><a href="#">Elezioni in Ungheria: il vincitore promette riforme costituzionali</a></h4>
+                <span class="tempo-pubblicazione">10 min fa</span>
             </article>
 
-            <article class="headline-item">
-                <h4><a href="#">Prozess in Berlin: Zweieinhalb Jahre Haft nach Attacke auf jüdischen Studenten</a></h4>
-                <span class="time">Vor 21 Min</span>
+            <article class="notizia-testuale">
+                <h4><a href="#">Processo a Berlino: condanna a due anni per l'aggressione allo studente</a></h4>
+                <span class="tempo-pubblicazione">21 min fa</span>
             </article>
 
-            <article class="headline-item">
-                <h4><a href="#">»Kill Bill« als ein laaaanger Film: 275 Minuten Rache</a></h4>
-                <span class="time">Vor 26 Min</span>
+            <article class="notizia-testuale">
+                <h4><a href="#">Cinema: il nuovo film del regista premiato agli Oscar dura 4 ore</a></h4>
+                <span class="tempo-pubblicazione">26 min fa</span>
             </article>
         </div>
     </section>
 
-    <div id="menu-overlay" class="overlay"></div>
+    <div id="overlay-menu" class="overlay"></div>
 
-    <nav id="side-menu" class="side-menu">
-        <div class="side-menu-header">
-            <button class="btn-side-login">Registrati (se vuoi) &gt;</button>
-            <button class="btn-side-sub">Abbonati &gt;</button>
+    <nav id="menu-laterale" class="menu-laterale">
+        <div class="header-menu-laterale">
+            <button class="btn-laterale-accedi">Accedi o Registrati &gt;</button>
+            <button class="btn-laterale-abbonati">Scopri gli Abbonamenti &gt;</button>
         </div>
-        <div class="side-search">
-            <input type="text" placeholder="spiegel.de durchsuchen..." aria-label="Cerca nel sito">
+        <div class="ricerca-laterale">
+            <input type="text" placeholder="Cerca nel sito..." aria-label="Cerca nel sito">
         </div>
-        <ul class="side-menu-links">
-            <li><a href="#" class="active">Palle <span>&gt;</span></a></li>
-            <li><a href="#">Culo <span>&gt;</span></a></li>
-            <li><a href="#">Pene <span>&gt;</span></a></li>
-            <li><a href="#">Sesso <span>&gt;</span></a></li>
-            <li><a href="#">SPIEGEL Extra <span>&gt;</span></a></li>
-            <li><a href="#">Prostata <span>&gt;</span></a></li>
+        <ul class="link-menu-laterale">
+            <li><a href="#" class="attivo">Homepage <span>&gt;</span></a></li>
+            <li><a href="#">Politica <span>&gt;</span></a></li>
+            <li><a href="#">Economia <span>&gt;</span></a></li>
+            <li><a href="#">Esteri <span>&gt;</span></a></li>
+            <li><a href="#">Cultura <span>&gt;</span></a></li>
+            <li><a href="#">Sport <span>&gt;</span></a></li>
             <li><a href="#">Shop <span>&gt;</span></a></li>
-            <li class="spiegel-plus"><a href="#">SPIEGEL+ <span>&gt;</span></a></li>
+            <li class="evidenziato-plus"><a href="#">ESCLUSIVA+ <span>&gt;</span></a></li>
         </ul>
     </nav>
 
-    <div class="page-container">
+    <div class="contenitore-pagina">
 
-        <main id="contenuto-principale" class="main-content">
+        <main id="contenuto-principale" class="contenuto-principale">
             
-            <section class="hero-complex">
-                <span class="category-red">Russlands Krieg in der Ukraine</span>
+            <section class="sezione-notizia-complessa">
+                <span class="categoria-rossa">Guerra in Ucraina</span>
                 
-                <div class="spiegel-card contenitore-cluster">
+                <div class="scheda-notizia contenitore-gruppo-notizie">
                     
-                    <article class="hero-split">
-                        <div class="hero-text">
-                            <h2><span class="plus-icon">+</span> Ukraine will feindliche Stellung erstmals nur mit Robotern und Drohnen eingenommen haben</h2>
-                            <p>Die Sensation kam in Minute vier: Mit einer bemerkenswerten Präsentation hat der ukrainische Präsident eine militärische Premiere verkündet. Russische Blogger reagieren bereits nervös.</p>
+                    <article class="notizia-divisa-principale">
+                        <div class="testo-notizia-principale">
+                            <h2><span class="icona-piu">+</span> L'esercito ucraino avanza usando solo robot e droni</h2>
+                            <p>La sensazione è arrivata al quarto minuto: con una presentazione notevole, il presidente ha annunciato una prima militare. I blogger militari reagiscono già con nervosismo.</p>
                         </div>
-                        <div class="hero-image">
-                            <img src="png/600x400.png" alt="Il presidente ucraino Zelensky in un ambiente buio circondato da mezzi militari">
+                        <div class="immagine-notizia-principale">
+                            <img src="png/600x400.png" alt="Il presidente ucraino in un ambiente buio circondato da mezzi militari">
                         </div>
                     </article>
 
-                    <article class="secondary-split linea-divisoria">
-                        <div class="secondary-text">
-                            <h2><span class="plus-icon">+</span> Für vier Millionen Rubel an die Front, plus Reisekosten</h2>
-                            <p>Russlands Behörden locken mit immer höheren Prämien, um Männer für den Krieg gegen die Ukraine zu verpflichten. Nicht nur die Soldaten bekommen Geld, auch ihre Anwerber.</p>
+                    <article class="notizia-divisa-secondaria linea-divisoria">
+                        <div class="testo-notizia-secondaria">
+                            <h2><span class="icona-piu">+</span> Quattro milioni di rubli per andare al fronte, più le spese di viaggio</h2>
+                            <p>Le autorità russe attirano gli uomini con premi sempre più alti per arruolarsi. Non solo i soldati ricevono soldi, ma anche chi li recluta. Approfondimento su un business macabro.</p>
                         </div>
-                        <div class="secondary-image">
+                        <div class="immagine-notizia-secondaria">
                             <img src="png/500x350.png" alt="Soldati in tenuta da combattimento">
                         </div>
                     </article>
@@ -111,42 +132,42 @@
                 </div>
             </section>
 
-            <section class="sub-hero">
-                <div class="grid-3-cols">
-                    <article class="spiegel-card p-15">
-                        <span class="micro-label">MEINUNG</span>
-                        <h3><span class="plus-icon">+</span> Deutschland braucht diesen Agenda-Moment</h3>
+            <section class="sotto-notizie">
+                <div class="griglia-3-colonne">
+                    <article class="scheda-notizia padding-15">
+                        <span class="micro-etichetta">OPINIONE</span>
+                        <h3><span class="icona-piu">+</span> Il Paese ha bisogno di questo momento decisivo</h3>
                     </article>
-                    <article class="spiegel-card p-15">
-                        <h3>»Volle Unterstützung« – Merz stellt sich hinter Wirtschaftsministerin</h3>
+                    <article class="scheda-notizia padding-15">
+                        <h3>Pieno supporto al nuovo piano per l'energia rinnovabile</h3>
                     </article>
-                    <article class="spiegel-card p-15">
-                        <h3>Mittagsaufschlag an den Tankstellen mit neuem Rekord</h3>
+                    <article class="scheda-notizia padding-15">
+                        <h3>Record dei prezzi dei carburanti nelle stazioni di servizio</h3>
                     </article>
                 </div>
             </section>
 
-            <section class="hero-complex">
-                <span class="category-red">Panorama</span>
+            <section class="sezione-notizia-complessa">
+                <span class="categoria-rossa">Panorama</span>
                 
-                <div class="spiegel-card contenitore-cluster">
+                <div class="scheda-notizia contenitore-gruppo-notizie">
                     
-                    <article class="hero-split">
-                        <div class="hero-text">
-                            <h2><span class="plus-icon">+</span> KI-Revolution im Alltag: Was sich jetzt für alle ändert</h2>
-                            <p>Von autonomen Autos bis hin zu smarten Haushaltsgeräten – die neue Technologie-Welle erreicht die Verbraucher. Ein Überblick über die wichtigsten Neuerungen, die uns in diesem Jahr erwarten.</p>
+                    <article class="notizia-divisa-principale">
+                        <div class="testo-notizia-principale">
+                            <h2><span class="icona-piu">+</span> Rivoluzione IA: cosa cambia ora per tutti noi</h2>
+                            <p>Dalle auto a guida autonoma agli elettrodomestici intelligenti, la nuova ondata tecnologica raggiunge i consumatori. Una panoramica delle novità più importanti di quest'anno.</p>
                         </div>
-                        <div class="hero-image">
-                            <img src="png/600x400.png" alt="Rappresentazione grafica di intelligenza artificiale e reti neurali">
+                        <div class="immagine-notizia-principale">
+                            <img src="png/600x400.png" alt="Rappresentazione grafica di intelligenza artificiale">
                         </div>
                     </article>
 
-                    <article class="secondary-split linea-divisoria">
-                        <div class="secondary-text">
-                            <h2><span class="plus-icon">+</span> Mars-Mission erfolgreich gestartet: Der lange Weg zum Roten Planeten</h2>
-                            <p>Nach jahrelanger Vorbereitung ist die neue Rakete auf dem Weg. Forscher erhoffen sich bahnbrechende Erkenntnisse über die Entstehung unseres Sonnensystems und mögliches Leben.</p>
+                    <article class="notizia-divisa-secondaria linea-divisoria">
+                        <div class="testo-notizia-secondaria">
+                            <h2><span class="icona-piu">+</span> Missione su Marte lanciata con successo</h2>
+                            <p>Dopo anni di preparazione, il nuovo razzo è in viaggio. I ricercatori sperano in scoperte rivoluzionarie sulla formazione del nostro sistema solare e sulla possibile vita extraterrestre.</p>
                         </div>
-                        <div class="secondary-image">
+                        <div class="immagine-notizia-secondaria">
                             <img src="png/500x350.png" alt="Lancio di un razzo spaziale verso il cielo">
                         </div>
                     </article>
@@ -154,144 +175,157 @@
                 </div>
             </section>
 
-            <section class="hero-complex">
-                <span class="category-red">Wirtschaft</span>
+            <section class="sezione-complessa">
+                <div class="header-sezione">
+                    <span class="categoria-rossa">Il meglio di ESCLUSIVA+ <span class="freccia">&gt;</span></span>
+                    <a href="#" class="link-header">Tutti gli articoli</a>
+                </div>
                 
-                <div class="spiegel-card contenitore-cluster">
+                <div class="scheda-notizia padding-25">
                     
-                    <article class="hero-split">
-                        <div class="hero-text">
-                            <h2><span class="plus-icon">+</span> Inflation sinkt weiter: Was das für Sparer bedeutet</h2>
-                            <p>Die Teuerungsrate in Deutschland geht spürbar zurück. Experten erklären, warum die Preise im Supermarkt trotzdem hoch bleiben und wie Anleger jetzt reagieren sollten, um ihr Geld zu schützen.</p>
-                        </div>
-                        <div class="hero-image">
-                            <img src="png/600x400.png" alt="Grafico economico in rialzo verde">
-                        </div>
-                    </article>
-
-                    <article class="secondary-split linea-divisoria">
-                        <div class="secondary-text">
-                            <h2><span class="plus-icon">+</span> Neue EU-Regeln für Tech-Giganten treten in Kraft</h2>
-                            <p>Apple, Google und Meta müssen ihre Plattformen öffnen. Für Verbraucher bringt das neue Freiheiten bei der App-Wahl, für die Konzerne bedeutet es Milliarden-Umbauten.</p>
-                        </div>
-                        <div class="secondary-image">
-                            <img src="png/500x350.png" alt="Loghi stilizzati delle principali aziende tecnologiche">
-                        </div>
-                    </article>
-
-                </div>
-            </section>
-
-            <section class="hero-complex">
-                <span class="category-red">Sport</span>
-                
-                <div class="spiegel-card contenitore-cluster">
-                    
-                    <article class="hero-split">
-                        <div class="hero-text">
-                            <h2><span class="plus-icon">+</span> Überraschung im Finale: Der Außenseiter holt den Pokal</h2>
-                            <p>Ein historischer Abend in der ausverkauften Arena: Nach einem dramatischen Elfmeterschießen feiert der Underdog den größten Erfolg der Vereinsgeschichte und lässt den Favoriten fassungslos zurück.</p>
-                        </div>
-                        <div class="hero-image">
-                            <img src="png/600x400.png" alt="Trofeo sportivo dorato alzato in aria">
-                        </div>
-                    </article>
-
-                    <article class="secondary-split linea-divisoria">
-                        <div class="secondary-text">
-                            <h2><span class="plus-icon">+</span> Die Zukunft der Formel 1: Mehr Rennen, neue Motoren</h2>
-                            <p>Die Motorsport-Königsklasse stellt sich neu auf. Ab 2026 gelten völlig neue Regeln, die den Sport nachhaltiger, lauter und vor allem wieder spannender machen sollen.</p>
-                        </div>
-                        <div class="secondary-image">
-                            <img src="png/500x350.png" alt="Automobile di Formula 1 rossa in pista">
-                        </div>
-                    </article>
-
-                </div>
-            </section>
-
-            <section class="horizontal-ranked-section spiegel-card">
-                <h3 class="section-title-red">Top bei SPIEGEL+</h3>
-                <div class="ranked-grid-3">
-                    <article class="ranked-item">
-                        <span class="rank-number">1</span>
-                        <div class="ranked-text">
-                            <h4><a href="#"><span class="plus-icon">+</span> Machtwechsel in Ungarn: Die drei Erkenntnisse aus Viktor Orbáns Wahlniederlage</a></h4>
-                        </div>
-                    </article>
-                    <article class="ranked-item">
-                        <span class="rank-number">2</span>
-                        <div class="ranked-text">
-                            <h4><a href="#"><span class="plus-icon">+</span> Gedenken in Buchenwald: Die unverzichtbaren Worte des Hape Kerkeling</a></h4>
-                        </div>
-                    </article>
-                    <article class="ranked-item">
-                        <span class="rank-number">3</span>
-                        <div class="ranked-text">
-                            <h4><a href="#"><span class="plus-icon">+</span> Reaktionen zur Ungarn-Wahl: Europa atmet auf, und die Rechte redet sich Orbáns Niederlage schön</a></h4>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="horizontal-ranked-section spiegel-card">
-                <h3 class="section-title-red">Meistgelesene Artikel</h3>
-                <div class="ranked-grid-3">
-                    <article class="ranked-item">
-                        <span class="rank-number">1</span>
-                        <div class="ranked-text">
-                            <h4><a href="#">Gescheiterte Friedensverhandlungen: US-Präsident Trump kündigt Blockade der Straße von Hormus an</a></h4>
-                        </div>
-                    </article>
-                    <article class="ranked-item">
-                        <span class="rank-number">2</span>
-                        <div class="ranked-text">
-                            <h4><a href="#">Krisen-PK der Bundesregierung: Koalition beschließt Entlastung wegen hoher Spritpreise</a></h4>
-                        </div>
-                    </article>
-                    <article class="ranked-item">
-                        <span class="rank-number">3</span>
-                        <div class="ranked-text">
-                            <h4><a href="#">Glückloser US-Vizepräsident: JD Vance wollte Orbán helfen – nun wird er im Netz verspottet</a></h4>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="shop-carousel-section spiegel-card">
-                
-                <div class="shop-header">
-                    <h3 class="section-title-red">SPIEGEL Shop <span class="arrow">&gt;</span></h3>
-                    <a href="#" class="shop-link">Jetzt entdecken</a>
-                </div>
-
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn prev-btn" aria-label="Scorri indietro">&lt;</button>
-                    <button class="carousel-btn next-btn" aria-label="Scorri avanti">&gt;</button>
-
-                    <div class="carousel-track" id="shop-track">
+                    <article class="notizia-verticale-principale">
+                        <h2><span class="icona-piu">+</span> 1171,04 Euro in più per un funzionario statale sposato con due figli</h2>
+                        <img src="png/1000x500.png" alt="Grafico a barre sulle retribuzioni statali">
+                        <p>La maggior parte dei dipendenti pubblici dovrebbe ricevere un aumento, secondo un disegno di legge del Ministero dell'Interno. Quanto può aspettarsi ognuno? Il nostro calcolatore ve lo mostra.</p>
                         
-                        <article class="shop-card">
-                            <img src="png/400x400.png" alt="Copertina del libro Smarter Leben">
-                            <h4>Die »Smarter leben«-Buchliste <span class="arrow">&gt;</span></h4>
-                            <p>Bücher, die Leben und Alltag einfacher machen. Eine Auswahl aus dem Podcast.</p>
+                        <div class="meta-articolo">
+                            <span class="tempo-lettura">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                4 Min
+                            </span>
+                            <button class="btn-segnalibro" aria-label="Salva articolo">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <div class="linea-divisoria-intera"></div>
+
+                    <div class="griglia-3-colonne">
+                        <article class="piccola-scheda-verticale">
+                            <img src="png/400x250.png" alt="Ritratto di un manager in posa formale">
+                            <h3><span class="icona-piu">+</span> L'uomo dell'altro mondo</h3>
+                            <p>Come manager, si lamentava del ritardo digitale del Paese. Ora, come Ministro del Digitale, deve recuperare il tempo perduto.</p>
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    10 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+                            </div>
                         </article>
 
-                        <article class="shop-card">
+                        <article class="piccola-scheda-verticale">
+                            <img src="png/400x250.png" alt="Atleta che usa gli anelli olimpici come occhiali">
+                            <h3><span class="icona-piu">+</span> I segreti della corsa miracolosa</h3>
+                            <p>Il preparatore atletico ci spiega cosa c'è dietro il record della maratona sotto le due ore e cosa possono imparare gli sportivi amatoriali.</p>
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    6 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+                            </div>
+                        </article>
+
+                        <article class="piccola-scheda-verticale">
+                            <img src="png/400x250.png" alt="Grafica glitchata di una persona con smartphone">
+                            <h3><span class="icona-piu">+</span> Nella rete del cybercrime</h3>
+                            <p>Un'inchiesta sulle truffe online che colpiscono migliaia di utenti ogni giorno. Come difendersi dalle nuove minacce digitali.</p>
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    5 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sezione-classifica-orizzontale scheda-notizia">
+                <h3 class="titolo-sezione-rosso">I più letti in ESCLUSIVA+</h3>
+                <div class="griglia-classifica-3">
+                    <article class="elemento-classifica">
+                        <span class="numero-classifica">1</span>
+                        <div class="testo-classifica">
+                            <h4><a href="#"><span class="icona-piu">+</span> Cambio di potere: le tre conseguenze delle elezioni europee</a></h4>
+                        </div>
+                    </article>
+                    <article class="elemento-classifica">
+                        <span class="numero-classifica">2</span>
+                        <div class="testo-classifica">
+                            <h4><a href="#"><span class="icona-piu">+</span> Memoria e storia: le parole indispensabili in questo momento critico</a></h4>
+                        </div>
+                    </article>
+                    <article class="elemento-classifica">
+                        <span class="numero-classifica">3</span>
+                        <div class="testo-classifica">
+                            <h4><a href="#"><span class="icona-piu">+</span> Reazioni dei mercati: l'Europa respira, i tassi scendono leggermente</a></h4>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="sezione-classifica-orizzontale scheda-notizia">
+                <h3 class="titolo-sezione-rosso">Articoli Più Letti</h3>
+                <div class="griglia-classifica-3">
+                    <article class="elemento-classifica">
+                        <span class="numero-classifica">1</span>
+                        <div class="testo-classifica">
+                            <h4><a href="#">Trattative di pace fallite: annunciato un nuovo blocco commerciale internazionale</a></h4>
+                        </div>
+                    </article>
+                    <article class="elemento-classifica">
+                        <span class="numero-classifica">2</span>
+                        <div class="testo-classifica">
+                            <h4><a href="#">Conferenza stampa del Governo: decisi nuovi aiuti contro il caro benzina</a></h4>
+                        </div>
+                    </article>
+                    <article class="elemento-classifica">
+                        <span class="numero-classifica">3</span>
+                        <div class="testo-classifica">
+                            <h4><a href="#">Scandalo politico: il deputato si dimette dopo le rivelazioni sul web</a></h4>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="sezione-carosello-shop scheda-notizia">
+                
+                <div class="header-shop">
+                    <h3 class="titolo-sezione-rosso">Il nostro Shop <span class="freccia">&gt;</span></h3>
+                    <a href="#" class="link-shop">Scopri ora</a>
+                </div>
+
+                <div class="contenitore-carosello">
+                    <button class="btn-carosello btn-precedente" aria-label="Scorri indietro">&lt;</button>
+                    <button class="btn-carosello btn-successivo" aria-label="Scorri avanti">&gt;</button>
+
+                    <div class="pista-carosello" id="pista-shop">
+                        
+                        <article class="scheda-shop">
+                            <img src="png/400x400.png" alt="Copertina del libro Vivere Meglio">
+                            <h4>La lista libri »Vivere Meglio« <span class="freccia">&gt;</span></h4>
+                            <p>Libri che rendono la vita e il quotidiano più semplici. Una selezione dal nostro podcast.</p>
+                        </article>
+
+                        <article class="scheda-shop">
                             <img src="png/400x400.png" alt="Vari quaderni e penne colorate">
-                            <h4>Notizbücher, Stifte und mehr <span class="arrow">&gt;</span></h4>
-                            <p>Schön schreiben, klug planen: Notizbücher, Stifte und mehr für Gedanken und Ideen.</p>
+                            <h4>Quaderni, penne e molto altro <span class="freccia">&gt;</span></h4>
+                            <p>Scrivere bene, pianificare con intelligenza: strumenti per pensieri, appuntamenti e idee.</p>
                         </article>
 
-                        <article class="shop-card">
+                        <article class="scheda-shop">
                             <img src="png/400x400.png" alt="Persone che giocano a un gioco da tavolo">
-                            <h4>Gesellschaftsspiele für Sie <span class="arrow">&gt;</span></h4>
-                            <p>Neuheiten, Klassiker und Empfehlungen, die für Gesprächsstoff sorgen.</p>
+                            <h4>Giochi da tavolo in famiglia <span class="freccia">&gt;</span></h4>
+                            <p>Novità, classici e consigli selezionati dalla nostra redazione giochi.</p>
                         </article>
 
-                        <article class="shop-card">
-                            <img src="png/400x400.png" alt="Copertina generica Spiegel Bestseller">
-                            <h4>Spiegel Bestseller <span class="arrow">&gt;</span></h4>
+                        <article class="scheda-shop">
+                            <img src="png/400x400.png" alt="Copertina generica Bestseller">
+                            <h4>I Bestseller del momento <span class="freccia">&gt;</span></h4>
                             <p>Scopri i libri più venduti di questa settimana selezionati dalla nostra redazione.</p>
                         </article>
 
@@ -302,126 +336,142 @@
         </main>
 
     </div>
-    <section class="magazine-section">
-        <h3 class="magazine-title">Alle Magazine des SPIEGEL</h3>
-        <div class="magazine-track">
-            <article class="magazine-item">
-                <img src="png/180x240.png" alt="">
-                <span>DER SPIEGEL</span>
-            </article>
-            <article class="magazine-item">
-                <img src="png/180x240.png" alt="">
-                <span>DEIN SPIEGEL</span>
-            </article>
-            <article class="magazine-item">
-                <img src="png/180x240.png" alt="">
-                <span>SPIEGEL WISSEN</span>
-            </article>
-            <article class="magazine-item">
-                <img src="png/180x240.png" alt="">
-                <span>S-Magazin</span>
-            </article>
-            <article class="magazine-item">
-                <img src="png/180x240.png" alt="">
-                <span>SPIEGEL GESCHICHTE</span>
-            </article>
-            <article class="magazine-item">
-                <img src="png/180x240.png" alt="">
-                <span>SPIEGEL BESTSELLER</span>
-            </article>
+
+    <section class="sezione-riviste">
+        <h3 class="titolo-riviste">Tutte le Nostre Riviste</h3>
+        <div class="contenitore-carosello">
+            <button class="btn-carosello btn-rivista-precedente" aria-label="Scorri indietro">&lt;</button>
+            <button class="btn-carosello btn-rivista-successivo" aria-label="Scorri avanti">&gt;</button>
+
+            <div class="pista-riviste" id="pista-riviste">
+                <article class="elemento-rivista">
+                    <img src="png/180x240.png" alt="">
+                    <span>IL GIORNALE</span>
+                </article>
+                <article class="elemento-rivista">
+                    <img src="png/180x240.png" alt="">
+                    <span>IL GIORNALE KIDS</span>
+                </article>
+                <article class="elemento-rivista">
+                    <img src="png/180x240.png" alt="">
+                    <span>SCIENZA & STORIA</span>
+                </article>
+                <article class="elemento-rivista">
+                    <img src="png/180x240.png" alt="">
+                    <span>MAGAZINE LIFESTYLE</span>
+                </article>
+                <article class="elemento-rivista">
+                    <img src="png/180x240.png" alt="">
+                    <span>STORIA ANTICA</span>
+                </article>
+                <article class="elemento-rivista">
+                    <img src="png/180x240.png" alt="">
+                    <span>I BESTSELLER</span>
+                </article>
+            </div>
         </div>
     </section>
 
-    <footer class="site-footer-new">
-        <h3 class="footer-title">SPIEGEL Gruppe</h3>
+    <footer class="footer-sito">
+        <h3 class="titolo-footer">Il Nostro Gruppo Editoriale</h3>
         
-        <ul class="footer-links-main">
-            <li><a href="#">Abo</a></li>
-            <li><a href="#">Abo kündigen</a></li>
+        <ul class="link-footer-principali">
+            <li><a href="#">Abbonamenti</a></li>
+            <li><a href="#">Disdici Abbonamento</a></li>
             <li><a href="#">Shop</a></li>
-            <li><a href="#">manager magazin</a></li>
-            <li><a href="#">Harvard Business manager</a></li>
-            <li><a href="#">SPIEGEL Ed</a></li>
-            <li><a href="#">11FREUNDE</a></li>
-            <li><a href="#">Werbung</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Branded Partnerships</a></li>
+            <li><a href="#">Magazine Management</a></li>
+            <li><a href="#">Business Manager</a></li>
+            <li><a href="#">Educazione</a></li>
+            <li><a href="#">Sport Magazine</a></li>
+            <li><a href="#">Pubblicità</a></li>
+            <li><a href="#">Lavora con noi</a></li>
+            <li><a href="#">Partnership</a></li>
         </ul>
 
-        <hr class="footer-divider">
+        <hr class="divisore-footer">
 
-        <ul class="footer-links-secondary">
-            <li><a href="#">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Barrierefreiheit</a></li>
-            <li><a href="#">Nutzungsbedingungen</a></li>
-            <li><a href="#">Teilnahmebedingungen</a></li>
-            <li><a href="#">Cookies & Tracking</a></li>
+        <ul class="link-footer-secondari">
+            <li><a href="#">Note Legali</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Accessibilità</a></li>
+            <li><a href="#">Termini d'Uso</a></li>
+            <li><a href="#">Condizioni di Vendita</a></li>
+            <li><a href="#">Impostazioni Cookie</a></li>
             <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Contatti</a></li>
         </ul>
 
-        <ul class="footer-links-secondary mt-10">
-            <li><a href="#">Hilfe & Service</a></li>
-            <li><a href="#">Text- & Nutzungsrechte</a></li>
+        <ul class="link-footer-secondari margine-superiore-10">
+            <li><a href="#">Aiuto & Servizio Clienti</a></li>
+            <li><a href="#">Diritti di Riproduzione Testi</a></li>
         </ul>
 
-        <div class="footer-socials">
-            <a href="#"><span class="social-icon" aria-hidden="true">f</span> Facebook</a>
-            <a href="#"><span class="social-icon" aria-hidden="true">📷</span> Instagram</a>
-            <a href="#"><span class="social-icon" aria-hidden="true">🌐</span> Wo Sie uns noch folgen können</a>
+        <div class="social-footer">
+            <a href="#"><span class="icona-social" aria-hidden="true">f</span> Facebook</a>
+            <a href="#"><span class="icona-social" aria-hidden="true">📷</span> Instagram</a>
+            <a href="#"><span class="icona-social" aria-hidden="true">🌐</span> Dove puoi seguirci</a>
         </div>
     </footer>
 
     <script>
-        // --- 1. LOGICA DELLO STICKY HEADER ---
-        const headerPrincipale = document.getElementById('main-header');
+        // 1. LOGICA SCROLL HEADER
+        const headerPrincipale = document.getElementById('header-principale');
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                headerPrincipale.classList.add('scrolled');
+                headerPrincipale.classList.add('in-scroll');
             } else {
-                headerPrincipale.classList.remove('scrolled');
+                headerPrincipale.classList.remove('in-scroll');
             }
         });
 
-        // --- 2. LOGICA DEL MENÙ LATERALE ---
-        const menuPrincipaleBtn = document.getElementById('main-menu-btn'); 
-        const menuStickyBtn = document.getElementById('sticky-menu-btn');   
-        const sideMenu = document.getElementById('side-menu');
-        const overlay = document.getElementById('menu-overlay');
+        // 2. LOGICA MENU LATERALE
+        const btnMenuPrincipale = document.getElementById('btn-menu-principale'); 
+        const btnMenuFisso = document.getElementById('btn-menu-fisso');   
+        const menuLaterale = document.getElementById('menu-laterale');
+        const overlayMenu = document.getElementById('overlay-menu');
 
         function toggleMenu() {
-            sideMenu.classList.toggle('menu-aperto');
-            overlay.classList.toggle('menu-aperto');
+            menuLaterale.classList.toggle('menu-aperto');
+            overlayMenu.classList.toggle('menu-aperto');
             
-            // Accessibilità aggiuntiva (opzionale ma consigliata):
-            // Quando si apre il menù, sposta il focus all'interno di esso
-            if (sideMenu.classList.contains('menu-aperto')) {
+            // Sposta il focus sulla barra di ricerca quando si apre il menù
+            if (menuLaterale.classList.contains('menu-aperto')) {
                 setTimeout(() => {
-                    document.querySelector('.side-search input').focus();
+                    document.querySelector('.ricerca-laterale input').focus();
                 }, 300);
             }
         }
 
-        menuPrincipaleBtn.addEventListener('click', toggleMenu);
-        menuStickyBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
+        btnMenuPrincipale.addEventListener('click', toggleMenu);
+        btnMenuFisso.addEventListener('click', toggleMenu);
+        overlayMenu.addEventListener('click', toggleMenu);
 
-        // --- 3. LOGICA DEL CAROSELLO SHOP ---
-        const track = document.getElementById('shop-track');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
+        // 3. LOGICA CAROSELLO SHOP
+        const pistaShop = document.getElementById('pista-shop');
+        const btnPrecedenteShop = document.querySelector('.btn-precedente');
+        const btnSuccessivoShop = document.querySelector('.btn-successivo');
 
-        // Quando clicchi a destra, scorre di 300 pixel
-        nextBtn.addEventListener('click', () => {
-            track.scrollBy({ left: 350, behavior: 'smooth' });
+        btnSuccessivoShop.addEventListener('click', () => {
+            pistaShop.scrollBy({ left: 350, behavior: 'smooth' });
+        });
+        btnPrecedenteShop.addEventListener('click', () => {
+            pistaShop.scrollBy({ left: -350, behavior: 'smooth' });
         });
 
-        // Quando clicchi a sinistra, torna indietro di 300 pixel
-        prevBtn.addEventListener('click', () => {
-            track.scrollBy({ left: -350, behavior: 'smooth' });
-        });
+        // 4. LOGICA CAROSELLO RIVISTE (PRE-FOOTER)
+        const pistaRiviste = document.getElementById('pista-riviste');
+        const btnPrevRivista = document.querySelector('.btn-rivista-precedente');
+        const btnNextRivista = document.querySelector('.btn-rivista-successivo');
+
+        if(btnNextRivista && btnPrevRivista && pistaRiviste) {
+            btnNextRivista.addEventListener('click', () => {
+                pistaRiviste.scrollBy({ left: 320, behavior: 'smooth' });
+            });
+            btnPrevRivista.addEventListener('click', () => {
+                pistaRiviste.scrollBy({ left: -320, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>
