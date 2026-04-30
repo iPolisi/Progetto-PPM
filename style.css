@@ -1,6 +1,4 @@
-/* =========================================
-   1. RESET E VARIABILI GLOBALI
-   ========================================= */
+/* Inizializzazione */
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +26,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* =========================================
-   1.5 ACCESSIBILITÀ E INTERATTIVITÀ
-   ========================================= */
+/* Accessibilità*/
 .salta-al-contenuto {
     position: absolute;
     top: -50px; 
@@ -56,20 +52,17 @@ input:focus-visible {
     border-radius: 2px;
 }
 
-/* Utility per le immagini cliccabili */
+
 .link-immagine {
     display: block;
     text-decoration: none;
     transition: opacity 0.3s ease;
 }
 .link-immagine:hover {
-    opacity: 0.85; /* Effetto visivo di trasparenza al passaggio del mouse */
+    opacity: 0.85; 
     text-decoration: none;
 }
 
-/* =========================================
-   2. CLASSI DI UTILITÀ E COMPONENTI
-   ========================================= */
 .scheda-notizia {
     background-color: #2c2c2c;
     border: 1px solid #333;
@@ -92,7 +85,7 @@ input:focus-visible {
     color: var(--colore-rosso-chiaro);
     font-size: 14px;
     font-weight: bold;
-    margin-top: 0; /* Annulla margine predefinito h2 */
+    margin-top: 0; 
     margin-bottom: 10px;
 }
 
@@ -122,9 +115,7 @@ input:focus-visible {
     font-weight: bold;
 }
 
-/* =========================================
-   3. STRUTTURA E LAYOUT PRINCIPALE
-   ========================================= */
+
 .contenitore-pagina {
     max-width: 1000px; 
     margin: 30px auto;
@@ -137,9 +128,7 @@ input:focus-visible {
     gap: 30px; 
 }
 
-/* =========================================
-   4. HEADER E BARRA DI NAVIGAZIONE
-   ========================================= */
+/*Header e search bar*/
 .header-sito {
     position: sticky;
     top: 0;
@@ -147,7 +136,6 @@ input:focus-visible {
     width: 100%;
 }
 
-/* --- BARRA ROSSA --- */
 .barra-rossa {
     background-color: var(--colore-primario-rosso);
     width: 100%;
@@ -218,7 +206,7 @@ input:focus-visible {
 }
 
 
-/* --- BARRA NERA --- */
+
 .barra-nera {
     background-color: #1a1a1a;
     width: 100%;
@@ -251,7 +239,7 @@ input:focus-visible {
     white-space: nowrap; 
 }
 
-/* --- CONTENITORE LINK CENTRALI --- */
+/* Contenitore Link Navigazione */
 .link-navigazione {
     display: flex;
     align-items: center;
@@ -286,7 +274,7 @@ input:focus-visible {
     padding-right: 20px; 
 }
 
-/* --- LENTE DI RICERCA --- */
+
 .btn-ricerca {
     background: none;
     border: none;
@@ -305,7 +293,7 @@ input:focus-visible {
     color: white;
 }
 
-/* --- ANIMAZIONE SCROLL DELLA PAGINA --- */
+/*Animazione Scroll*/
 .header-sito.in-scroll .barra-nera {
     height: 0; 
 }
@@ -326,9 +314,7 @@ input:focus-visible {
     display: none; 
 }
 
-/* =========================================
-   5. MENU LATERALE A SCOMPARSA (OVERLAY)
-   ========================================= */
+/*Menu' laterale a scomparsa*/
 .overlay {
     position: fixed;
     top: 0;
@@ -437,10 +423,7 @@ input:focus-visible {
     background-color: #c93a10; 
 }
 
-/* =========================================
-   6. ARTICOLI E NOTIZIE
-   ========================================= */
-/* Barra Notizie Testuali in Alto */
+/* Articoli e Notizie Testuali */
 .notizie-testuali-superiori {
     background-color: #1a1a1a; 
     border-top: 1px solid #333; 
@@ -483,7 +466,7 @@ input:focus-visible {
     font-size: 12px;
 }
 
-/* Notizia Principale (Hero) */
+
 .notizia-divisa-principale {
     display: grid;
     grid-template-columns: 1fr 1.2fr; 
@@ -515,7 +498,7 @@ input:focus-visible {
     display: block;
 }
 
-/* Notizia Secondaria (Orizzontale) */
+
 .notizia-divisa-secondaria {
     display: grid;
     grid-template-columns: 1.3fr 1fr; 
@@ -547,9 +530,7 @@ input:focus-visible {
     display: block;
 }
 
-/* =========================================
-   SEZIONE COMPOSITA (Notizia Grande + 3 Piccole)
-   ========================================= */
+/* Notizia Grande + 3 Piccole */
 .sezione-complessa .header-sezione {
     display: flex;
     justify-content: space-between;
@@ -601,7 +582,7 @@ input:focus-visible {
     line-height: 1.5;
 }
 
-/* Dettagli Meta (Tempo e Segnalibro) */
+/* Dettagli Tempo e Segnalibro */
 .meta-articolo {
     display: flex;
     justify-content: space-between;
@@ -630,13 +611,13 @@ input:focus-visible {
     color: var(--colore-rosso-chiaro);
 }
 
-/* Linea divisoria intera */
+
 .linea-divisoria-intera {
     border-top: 1px solid #444;
     margin: 25px 0;
 }
 
-/* Card piccole verticali */
+
 .piccola-scheda-verticale {
     display: flex;
     flex-direction: column;
@@ -662,9 +643,7 @@ input:focus-visible {
     line-height: 1.4;
 }
 
-/* =========================================
-   7. CLASSIFICHE E SEZIONI ORIZZONTALI
-   ========================================= */
+/* Sezioni orizzontali*/
 .sezione-classifica-orizzontale {
     padding: 25px 30px;
 }
@@ -717,9 +696,7 @@ input:focus-visible {
     color: var(--colore-primario-rosso);
 }
 
-/* =========================================
-   8. CAROSELLI (Shop e Riviste)
-   ========================================= */
+/* Caroselli */
 .contenitore-carosello {
     position: relative; 
 }
@@ -765,7 +742,7 @@ input:focus-visible {
 .btn-precedente, .btn-rivista-precedente { left: -15px; } 
 .btn-successivo, .btn-rivista-successivo { right: -15px; }
 
-/* Carosello: Shop */
+/* Carosello Shop */
 .sezione-carosello-shop {
     padding: 25px 30px;
 }
@@ -812,7 +789,7 @@ input:focus-visible {
     line-height: 1.4;
 }
 
-/* Carosello: Magazine (Pre-Footer) */
+/* Carosello Magazine */
 .sezione-riviste {
     max-width: 1000px;
     margin: 60px auto 40px auto;
@@ -863,9 +840,7 @@ input:focus-visible {
     top: 40%; 
 }
 
-/* =========================================
-   9. FOOTER
-   ========================================= */
+/* Footer */
 .footer-sito {
     max-width: 1000px;
     margin: 0 auto 40px auto;
@@ -940,9 +915,7 @@ input:focus-visible {
     font-size: 16px;
 }
 
-/* =========================================
-   10. RESPONSIVITÀ (MEDIA QUERIES)
-   ========================================= */
+/* Responsività */
 
 /* Tablet e schermi medi */
 @media (max-width: 1024px) {
@@ -963,14 +936,14 @@ input:focus-visible {
 
 /* Smartphone e schermi piccoli */
 @media (max-width: 768px) {
-    /* Griglie a colonna singola */
+    
     .contenitore-notizie-testuali,
     .griglia-3-colonne,
     .griglia-classifica-3 {
         grid-template-columns: 1fr; 
     }
     
-    /* Articoli e classifiche incolonnate */
+    
     .notizia-testuale,
     .elemento-classifica {
         border-right: none;
@@ -991,7 +964,7 @@ input:focus-visible {
         padding-bottom: 0;
     }
 
-    /* Adattamenti per Caroselli e Footer */
+    
     .pista-riviste {
         justify-content: flex-start; 
         padding: 0 20px 20px;
