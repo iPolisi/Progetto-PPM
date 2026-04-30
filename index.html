@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito News Clone</title>
+    <title>Sito News Clone - Template</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <a href="#contenuto-principale" class="salta-al-contenuto">Salta al contenuto principale</a>
 
+    <!-- HEADER PRINCIPALE -->
     <header id="header-principale" class="header-sito">
         
         <div class="barra-rossa">
@@ -17,7 +18,7 @@
                 
                 <div class="contenitore-logo">
                     <button id="btn-menu-fisso" class="btn-menu solo-menu-fisso" aria-label="Apri il menù principale">☰</button>
-                    <div class="logo">IL GIORNALE</div>
+                    <h1 class="logo">IL GIORNALE</h1>
                 </div>
 
                 <div class="azioni-superiori">
@@ -59,25 +60,27 @@
         </div>
     </header>
 
+    <!-- NOTIZIE TESTUALI IN CIMA -->
     <section class="notizie-testuali-superiori">
         <div class="contenitore-notizie-testuali">
             <article class="notizia-testuale">
-                <h4><a href="#">Elezioni in Ungheria: il vincitore promette riforme costituzionali</a></h4>
+                <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod</a></h2>
                 <span class="tempo-pubblicazione">10 min fa</span>
             </article>
 
             <article class="notizia-testuale">
-                <h4><a href="#">Processo a Berlino: condanna a due anni per l'aggressione allo studente</a></h4>
+                <h2><a href="#">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</a></h2>
                 <span class="tempo-pubblicazione">21 min fa</span>
             </article>
 
             <article class="notizia-testuale">
-                <h4><a href="#">Cinema: il nuovo film del regista premiato agli Oscar dura 4 ore</a></h4>
+                <h2><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</a></h2>
                 <span class="tempo-pubblicazione">26 min fa</span>
             </article>
         </div>
     </section>
 
+    <!-- MENU LATERALE A SCOMPARSA -->
     <div id="overlay-menu" class="overlay"></div>
 
     <nav id="menu-laterale" class="menu-laterale">
@@ -104,89 +107,147 @@
 
         <main id="contenuto-principale" class="contenuto-principale">
             
+            <!-- CLUSTER NOTIZIE 1 -->
             <section class="sezione-notizia-complessa">
-                <span class="categoria-rossa">Guerra in Ucraina</span>
+                <h2 class="categoria-rossa">Primo Piano</h2>
                 
                 <div class="scheda-notizia contenitore-gruppo-notizie">
                     
                     <article class="notizia-divisa-principale">
                         <div class="testo-notizia-principale">
-                            <h2><span class="icona-piu">+</span> L'esercito ucraino avanza usando solo robot e droni</h2>
-                            <p>La sensazione è arrivata al quarto minuto: con una presentazione notevole, il presidente ha annunciato una prima militare. I blogger militari reagiscono già con nervosismo.</p>
+                            <h3><a href="#"><span class="icona-piu">+</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                            <!-- Aggiunto Meta Articolo -->
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    7 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </div>
                         </div>
                         <div class="immagine-notizia-principale">
-                            <img src="png/600x400.png" alt="Il presidente ucraino in un ambiente buio circondato da mezzi militari">
+                            <a href="#" class="link-immagine">
+                                <img src="png/600x400.png" alt="Fotografia di copertina per l'articolo principale in evidenza">
+                            </a>
                         </div>
                     </article>
 
                     <article class="notizia-divisa-secondaria linea-divisoria">
                         <div class="testo-notizia-secondaria">
-                            <h2><span class="icona-piu">+</span> Quattro milioni di rubli per andare al fronte, più le spese di viaggio</h2>
-                            <p>Le autorità russe attirano gli uomini con premi sempre più alti per arruolarsi. Non solo i soldati ricevono soldi, ma anche chi li recluta. Approfondimento su un business macabro.</p>
+                            <h3><a href="#"><span class="icona-piu">+</span> Duis aute irure dolor in reprehenderit in voluptate</a></h3>
+                            <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <!-- Aggiunto Meta Articolo -->
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    4 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </div>
                         </div>
                         <div class="immagine-notizia-secondaria">
-                            <img src="png/500x350.png" alt="Soldati in tenuta da combattimento">
+                            <a href="#" class="link-immagine">
+                                <img src="png/500x350.png" alt="Immagine descrittiva per la notizia secondaria correlata">
+                            </a>
                         </div>
                     </article>
 
                 </div>
             </section>
 
+            <!-- 3 NOTIZIE PICCOLE -->
             <section class="sotto-notizie">
                 <div class="griglia-3-colonne">
                     <article class="scheda-notizia padding-15">
                         <span class="micro-etichetta">OPINIONE</span>
-                        <h3><span class="icona-piu">+</span> Il Paese ha bisogno di questo momento decisivo</h3>
+                        <h4><a href="#"><span class="icona-piu">+</span> Excepteur sint occaecat cupidatat non proident</a></h4>
                     </article>
                     <article class="scheda-notizia padding-15">
-                        <h3>Pieno supporto al nuovo piano per l'energia rinnovabile</h3>
+                        <h4><a href="#">Sunt in culpa qui officia deserunt mollit anim id est laborum</a></h4>
                     </article>
                     <article class="scheda-notizia padding-15">
-                        <h3>Record dei prezzi dei carburanti nelle stazioni di servizio</h3>
+                        <h4><a href="#">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a></h4>
                     </article>
                 </div>
             </section>
 
+            <!-- CLUSTER NOTIZIE 2 -->
             <section class="sezione-notizia-complessa">
-                <span class="categoria-rossa">Panorama</span>
+                <h2 class="categoria-rossa">Panorama</h2>
                 
                 <div class="scheda-notizia contenitore-gruppo-notizie">
                     
                     <article class="notizia-divisa-principale">
                         <div class="testo-notizia-principale">
-                            <h2><span class="icona-piu">+</span> Rivoluzione IA: cosa cambia ora per tutti noi</h2>
-                            <p>Dalle auto a guida autonoma agli elettrodomestici intelligenti, la nuova ondata tecnologica raggiunge i consumatori. Una panoramica delle novità più importanti di quest'anno.</p>
+                            <h3><a href="#"><span class="icona-piu">+</span> Accusantium doloremque laudantium, totam rem aperiam</a></h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                            
+                            <!-- Aggiunto Meta Articolo -->
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    8 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </div>
                         </div>
                         <div class="immagine-notizia-principale">
-                            <img src="png/600x400.png" alt="Rappresentazione grafica di intelligenza artificiale">
+                            <a href="#" class="link-immagine">
+                                <img src="png/600x400.png" alt="Immagine di apertura per la sezione di attualità">
+                            </a>
                         </div>
                     </article>
 
                     <article class="notizia-divisa-secondaria linea-divisoria">
                         <div class="testo-notizia-secondaria">
-                            <h2><span class="icona-piu">+</span> Missione su Marte lanciata con successo</h2>
-                            <p>Dopo anni di preparazione, il nuovo razzo è in viaggio. I ricercatori sperano in scoperte rivoluzionarie sulla formazione del nostro sistema solare e sulla possibile vita extraterrestre.</p>
+                            <h3><a href="#"><span class="icona-piu">+</span> Neque porro quisquam est, qui dolorem ipsum quia dolor</a></h3>
+                            <p>Sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            
+                            <!-- Aggiunto Meta Articolo -->
+                            <div class="meta-articolo margine-superiore-auto">
+                                <span class="tempo-lettura">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    5 Min
+                                </span>
+                                <button class="btn-segnalibro" aria-label="Salva articolo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </div>
                         </div>
                         <div class="immagine-notizia-secondaria">
-                            <img src="png/500x350.png" alt="Lancio di un razzo spaziale verso il cielo">
+                            <a href="#" class="link-immagine">
+                                <img src="png/500x350.png" alt="Fotografia a corredo dell'articolo di approfondimento">
+                            </a>
                         </div>
                     </article>
 
                 </div>
             </section>
 
+            <!-- SEZIONE COMPOSITA (Notizia Grande + 3 Piccole) -->
             <section class="sezione-complessa">
                 <div class="header-sezione">
-                    <span class="categoria-rossa">Il meglio di ESCLUSIVA+ <span class="freccia">&gt;</span></span>
+                    <h2 class="categoria-rossa">Il meglio di ESCLUSIVA+ <span class="freccia">&gt;</span></h2>
                     <a href="#" class="link-header">Tutti gli articoli</a>
                 </div>
                 
                 <div class="scheda-notizia padding-25">
                     
                     <article class="notizia-verticale-principale">
-                        <h2><span class="icona-piu">+</span> 1171,04 Euro in più per un funzionario statale sposato con due figli</h2>
-                        <img src="png/1000x500.png" alt="Grafico a barre sulle retribuzioni statali">
-                        <p>La maggior parte dei dipendenti pubblici dovrebbe ricevere un aumento, secondo un disegno di legge del Ministero dell'Interno. Quanto può aspettarsi ognuno? Il nostro calcolatore ve lo mostra.</p>
+                        <h3><a href="#"><span class="icona-piu">+</span> Ut enim ad minima veniam, quis nostrum exercitationem ullam</a></h3>
+                        <a href="#" class="link-immagine">
+                            <img src="png/1000x500.png" alt="Immagine a tutta larghezza per l'articolo speciale in esclusiva">
+                        </a>
+                        <p>Corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
                         
                         <div class="meta-articolo">
                             <span class="tempo-lettura">
@@ -203,9 +264,11 @@
 
                     <div class="griglia-3-colonne">
                         <article class="piccola-scheda-verticale">
-                            <img src="png/400x250.png" alt="Ritratto di un manager in posa formale">
-                            <h3><span class="icona-piu">+</span> L'uomo dell'altro mondo</h3>
-                            <p>Come manager, si lamentava del ritardo digitale del Paese. Ora, come Ministro del Digitale, deve recuperare il tempo perduto.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x250.png" alt="Anteprima visiva per la prima notizia in griglia">
+                            </a>
+                            <h4><a href="#"><span class="icona-piu">+</span> At vero eos et accusamus et iusto odio</a></h4>
+                            <p>Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
                             <div class="meta-articolo margine-superiore-auto">
                                 <span class="tempo-lettura">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -216,9 +279,11 @@
                         </article>
 
                         <article class="piccola-scheda-verticale">
-                            <img src="png/400x250.png" alt="Atleta che usa gli anelli olimpici come occhiali">
-                            <h3><span class="icona-piu">+</span> I segreti della corsa miracolosa</h3>
-                            <p>Il preparatore atletico ci spiega cosa c'è dietro il record della maratona sotto le due ore e cosa possono imparare gli sportivi amatoriali.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x250.png" alt="Anteprima visiva per la seconda notizia in griglia">
+                            </a>
+                            <h4><a href="#"><span class="icona-piu">+</span> Occaecati cupiditate non provident</a></h4>
+                            <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est.</p>
                             <div class="meta-articolo margine-superiore-auto">
                                 <span class="tempo-lettura">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -229,9 +294,11 @@
                         </article>
 
                         <article class="piccola-scheda-verticale">
-                            <img src="png/400x250.png" alt="Grafica glitchata di una persona con smartphone">
-                            <h3><span class="icona-piu">+</span> Nella rete del cybercrime</h3>
-                            <p>Un'inchiesta sulle truffe online che colpiscono migliaia di utenti ogni giorno. Come difendersi dalle nuove minacce digitali.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x250.png" alt="Anteprima visiva per la terza notizia in griglia">
+                            </a>
+                            <h4><a href="#"><span class="icona-piu">+</span> Nam libero tempore, cum soluta nobis</a></h4>
+                            <p>Est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
                             <div class="meta-articolo margine-superiore-auto">
                                 <span class="tempo-lettura">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -244,58 +311,60 @@
                 </div>
             </section>
 
+            <!-- CLASSIFICHE ORIZZONTALI -->
             <section class="sezione-classifica-orizzontale scheda-notizia">
-                <h3 class="titolo-sezione-rosso">I più letti in ESCLUSIVA+</h3>
+                <h2 class="titolo-sezione-rosso">I più letti in ESCLUSIVA+</h2>
                 <div class="griglia-classifica-3">
                     <article class="elemento-classifica">
                         <span class="numero-classifica">1</span>
                         <div class="testo-classifica">
-                            <h4><a href="#"><span class="icona-piu">+</span> Cambio di potere: le tre conseguenze delle elezioni europee</a></h4>
+                            <h3><a href="#"><span class="icona-piu">+</span> Temporibus autem quibusdam et aut officiis debitis</a></h3>
                         </div>
                     </article>
                     <article class="elemento-classifica">
                         <span class="numero-classifica">2</span>
                         <div class="testo-classifica">
-                            <h4><a href="#"><span class="icona-piu">+</span> Memoria e storia: le parole indispensabili in questo momento critico</a></h4>
+                            <h3><a href="#"><span class="icona-piu">+</span> Aut rerum necessitatibus saepe eveniet ut et voluptates</a></h3>
                         </div>
                     </article>
                     <article class="elemento-classifica">
                         <span class="numero-classifica">3</span>
                         <div class="testo-classifica">
-                            <h4><a href="#"><span class="icona-piu">+</span> Reazioni dei mercati: l'Europa respira, i tassi scendono leggermente</a></h4>
+                            <h3><a href="#"><span class="icona-piu">+</span> Repudiandae sint et molestiae non recusandae itaque</a></h3>
                         </div>
                     </article>
                 </div>
             </section>
 
             <section class="sezione-classifica-orizzontale scheda-notizia">
-                <h3 class="titolo-sezione-rosso">Articoli Più Letti</h3>
+                <h2 class="titolo-sezione-rosso">Articoli Più Letti</h2>
                 <div class="griglia-classifica-3">
                     <article class="elemento-classifica">
                         <span class="numero-classifica">1</span>
                         <div class="testo-classifica">
-                            <h4><a href="#">Trattative di pace fallite: annunciato un nuovo blocco commerciale internazionale</a></h4>
+                            <h3><a href="#">Itaque earum rerum hic tenetur a sapiente delectus</a></h3>
                         </div>
                     </article>
                     <article class="elemento-classifica">
                         <span class="numero-classifica">2</span>
                         <div class="testo-classifica">
-                            <h4><a href="#">Conferenza stampa del Governo: decisi nuovi aiuti contro il caro benzina</a></h4>
+                            <h3><a href="#">Ut aut reiciendis voluptatibus maiores alias consequatur</a></h3>
                         </div>
                     </article>
                     <article class="elemento-classifica">
                         <span class="numero-classifica">3</span>
                         <div class="testo-classifica">
-                            <h4><a href="#">Scandalo politico: il deputato si dimette dopo le rivelazioni sul web</a></h4>
+                            <h3><a href="#">Aut perferendis doloribus asperiores repellat</a></h3>
                         </div>
                     </article>
                 </div>
             </section>
 
+            <!-- CAROSELLO SHOP -->
             <section class="sezione-carosello-shop scheda-notizia">
                 
                 <div class="header-shop">
-                    <h3 class="titolo-sezione-rosso">Il nostro Shop <span class="freccia">&gt;</span></h3>
+                    <h2 class="titolo-sezione-rosso">Il nostro Shop <span class="freccia">&gt;</span></h2>
                     <a href="#" class="link-shop">Scopri ora</a>
                 </div>
 
@@ -306,27 +375,35 @@
                     <div class="pista-carosello" id="pista-shop">
                         
                         <article class="scheda-shop">
-                            <img src="png/400x400.png" alt="Copertina del libro Vivere Meglio">
-                            <h4>La lista libri »Vivere Meglio« <span class="freccia">&gt;</span></h4>
-                            <p>Libri che rendono la vita e il quotidiano più semplici. Una selezione dal nostro podcast.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x400.png" alt="Copertina del primo prodotto raccomandato nello shop">
+                            </a>
+                            <h3><a href="#">Prodotto Lorem Ipsum <span class="freccia">&gt;</span></a></h3>
+                            <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         </article>
 
                         <article class="scheda-shop">
-                            <img src="png/400x400.png" alt="Vari quaderni e penne colorate">
-                            <h4>Quaderni, penne e molto altro <span class="freccia">&gt;</span></h4>
-                            <p>Scrivere bene, pianificare con intelligenza: strumenti per pensieri, appuntamenti e idee.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x400.png" alt="Immagine descrittiva per il secondo articolo dello shop">
+                            </a>
+                            <h3><a href="#">Consectetur adipiscing <span class="freccia">&gt;</span></a></h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                         </article>
 
                         <article class="scheda-shop">
-                            <img src="png/400x400.png" alt="Persone che giocano a un gioco da tavolo">
-                            <h4>Giochi da tavolo in famiglia <span class="freccia">&gt;</span></h4>
-                            <p>Novità, classici e consigli selezionati dalla nostra redazione giochi.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x400.png" alt="Anteprima del terzo prodotto in vendita">
+                            </a>
+                            <h3><a href="#">Sed do eiusmod <span class="freccia">&gt;</span></a></h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
                         </article>
 
                         <article class="scheda-shop">
-                            <img src="png/400x400.png" alt="Copertina generica Bestseller">
-                            <h4>I Bestseller del momento <span class="freccia">&gt;</span></h4>
-                            <p>Scopri i libri più venduti di questa settimana selezionati dalla nostra redazione.</p>
+                            <a href="#" class="link-immagine">
+                                <img src="png/400x400.png" alt="Immagine di presentazione del quarto prodotto">
+                            </a>
+                            <h3><a href="#">Tempor incididunt <span class="freccia">&gt;</span></a></h3>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
                         </article>
 
                     </div>
@@ -337,43 +414,46 @@
 
     </div>
 
+    <!-- CAROSELLO RIVISTE (PRE-FOOTER) -->
     <section class="sezione-riviste">
-        <h3 class="titolo-riviste">Tutte le Nostre Riviste</h3>
+        <h2 class="titolo-riviste">Tutte le Nostre Riviste</h2>
         <div class="contenitore-carosello">
             <button class="btn-carosello btn-rivista-precedente" aria-label="Scorri indietro">&lt;</button>
             <button class="btn-carosello btn-rivista-successivo" aria-label="Scorri avanti">&gt;</button>
 
             <div class="pista-riviste" id="pista-riviste">
+                
                 <article class="elemento-rivista">
-                    <img src="png/180x240.png" alt="">
-                    <span>IL GIORNALE</span>
+                    <a href="#" class="link-immagine"><img src="png/180x240.png" alt="a"></a>
+                    <span><a href="#">LOREM IPSUM</a></span>
                 </article>
                 <article class="elemento-rivista">
-                    <img src="png/180x240.png" alt="">
-                    <span>IL GIORNALE KIDS</span>
+                    <a href="#" class="link-immagine"><img src="png/180x240.png" alt="b"></a>
+                    <span><a href="#">DOLOR SIT</a></span>
                 </article>
                 <article class="elemento-rivista">
-                    <img src="png/180x240.png" alt="">
-                    <span>SCIENZA & STORIA</span>
+                    <a href="#" class="link-immagine"><img src="png/180x240.png" alt="c"></a>
+                    <span><a href="#">AMET ELIT</a></span>
                 </article>
                 <article class="elemento-rivista">
-                    <img src="png/180x240.png" alt="">
-                    <span>MAGAZINE LIFESTYLE</span>
+                    <a href="#" class="link-immagine"><img src="png/180x240.png" alt="d"></a>
+                    <span><a href="#">CONSECTETUR</a></span>
                 </article>
                 <article class="elemento-rivista">
-                    <img src="png/180x240.png" alt="">
-                    <span>STORIA ANTICA</span>
+                    <a href="#" class="link-immagine"><img src="png/180x240.png" alt="e"></a>
+                    <span><a href="#">ADIPISCING</a></span>
                 </article>
                 <article class="elemento-rivista">
-                    <img src="png/180x240.png" alt="">
-                    <span>I BESTSELLER</span>
+                    <a href="#" class="link-immagine"><img src="png/180x240.png" alt="f"></a>
+                    <span><a href="#">SED DO</a></span>
                 </article>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer-sito">
-        <h3 class="titolo-footer">Il Nostro Gruppo Editoriale</h3>
+        <h2 class="titolo-footer">Il Nostro Gruppo Editoriale</h2>
         
         <ul class="link-footer-principali">
             <li><a href="#">Abbonamenti</a></li>
@@ -413,6 +493,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT JAVASCRIPT -->
     <script>
         // 1. LOGICA SCROLL HEADER
         const headerPrincipale = document.getElementById('header-principale');
