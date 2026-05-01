@@ -974,4 +974,35 @@ input:focus-visible {
         flex-direction: column;
         gap: 15px;
     }
+
+
+
+    .barra-rossa-interna {
+        padding: 15px 15px; 
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .link-abbonamento {
+        display: none;
+    }
+
+  
+    .header-sito.in-scroll .barra-rossa-interna {
+        
+        padding: 10px 15px; 
+    }
+
+    .header-sito.in-scroll .logo {
+      
+        font-size: 18px; 
+    }
+
+    .solo-menu-fisso {
+        font-size: 20px;
+        margin-right: 10px;
+    }
 }
