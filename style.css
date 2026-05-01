@@ -1006,3 +1006,41 @@ input:focus-visible {
         margin-right: 10px;
     }
 }
+
+/* Gestione taglio barra su mobile */
+.contenitore-logo {
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    line-height: 1 !important; 
+    padding: 0 !important;
+}
+
+.solo-menu-fisso {
+    line-height: 1 !important;
+    padding: 0 !important;
+    min-height: 0 !important; 
+}
+
+@media (max-width: 768px) {
+    .barra-rossa-interna {
+        min-height: 60px; 
+    }
+
+    .header-sito.in-scroll .barra-rossa-interna {
+        min-height: 55px; 
+        padding: 12px 20px !important; 
+    }
+
+    .header-sito.in-scroll .logo {
+        font-size: 20px !important; 
+        margin-top: 2px; 
+    }
+
+    .solo-menu-fisso {
+        font-size: 24px !important; 
+        margin-right: 12px !important;
+    }
+}
